@@ -7,7 +7,7 @@
 
 - 📫 How to reach me **shakib1186@gmail.com**
 
-- 📄 Know about my experiences [https://drive.google.com/file/d/13-DtPxTb1GdWvjCd_DnmQqSGBc74gYjd/view?usp=sharing](https://drive.google.com/file/d/13-DtPxTb1GdWvjCd_DnmQqSGBc74gYjd/view?usp=sharing)
+- 📄 Know about my experiences [Resume](https://drive.google.com/file/d/13-DtPxTb1GdWvjCd_DnmQqSGBc74gYjd/view?usp=sharing)
 
 - ⚡ Fun fact **I think I'm funny**
 
