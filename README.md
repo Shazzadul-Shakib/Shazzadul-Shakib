@@ -1,13 +1,12 @@
 <h1 align="center">Hi 👋, I'm Shazzadul Islam Shakib</h1>
 <h3 align="center">A passionate frontend developer from Bangladesh</h3>
 
-- 🌱 I’m currently learning **Node.js, express.js, MongoDB**
+- 🌱 I’m currently learning **Next.js, Redux, TypeScript**
 
 - 💬 Ask me about **Web Development**
 
 - 📫 How to reach me **shakib1186@gmail.com**
 
-- 📄 Know about my experiences [Resume](https://drive.google.com/file/d/13-DtPxTb1GdWvjCd_DnmQqSGBc74gYjd/view?usp=sharing)
 
 
 <h3 align="left">Connect with me:</h3>
