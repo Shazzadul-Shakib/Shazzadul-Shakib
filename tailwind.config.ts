@@ -18,3 +18,6 @@ const config: Config = {
   plugins: [],
 }
 export default config
+
+// #4C516D bg color
+// #EF403A button/hover
