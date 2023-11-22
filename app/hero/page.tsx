@@ -2,10 +2,11 @@
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 export default function Hero() {
   return (
-    <main className=" h-screen flex gap-10 pt-52 bg-[url('/logoB.png')] bg-no-repeat bg-[center_right_12rem] md:gap-48">
+    <main id="hero" className="flex gap-10 pt-52 bg-[url('/logoB.png')] bg-no-repeat bg-[center_right_16rem] bg-blend-darken md:gap-48">
       <div className=" ml-4">
         <div className="flex flex-col items-center justify-center">
           <div className="h-[100px] bg-white w-0.5 my-4 "></div>
@@ -23,6 +24,12 @@ export default function Hero() {
           <h2 className=" text-gray-400 text-lg font-semibold italic my-5 md:text-xl">
             Front-end Developer
           </h2>
+        </div>
+        <div className="flex items-center">
+          <button className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md">
+            About Me
+          </button>
+          <HiArrowLongRight className=" text-4xl text-white -ml-2" />
         </div>
       </div>
     </main>
