@@ -1,12 +1,23 @@
+'use client'
 import Image from "next/image";
-import Link from "next/link";
-import { FiAlignRight } from "react-icons/fi";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export default function Navbar() {
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
+
   return (
-    <main className="w-[90%] mx-auto text-white flex justify-between items-center px-2 py-4 md:px-4 md:py-4 md:w-[80%]">
+    <main className="w-[90%] sticky top-0 mx-auto text-white flex justify-between items-center px-2 py-4 md:px-4 md:py-4 md:w-[80%]">
       <div>
-        <Link href="/">
+        <ScrollLink
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
+        >
           <Image
             src="/logoW.png"
             width={50}
@@ -15,37 +26,50 @@ export default function Navbar() {
             priority={true}
             alt="Logo"
           />
-        </Link>
+        </ScrollLink>
       </div>
       <div>
-        <div className="block md:hidden">
-          <FiAlignRight className="text-3xl" />
-        </div>
         <div className="hidden md:block">
-          <Link
-            href="/"
-            className=" ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A]  "
+          <ScrollLink
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
           >
             About
-          </Link>
-          <Link
-            href="/"
-            className=" ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A]  "
+          </ScrollLink>
+          <ScrollLink
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
           >
             Skills
-          </Link>
-          <Link
-            href="/"
-            className=" ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A]  "
+          </ScrollLink>
+          <ScrollLink
+            to="works"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
           >
             Works
-          </Link>
-          <Link
-            href="/"
-            className=" ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A]  "
+          </ScrollLink>
+          <ScrollLink
+            to="resume"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
           >
             Resume
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </main>
