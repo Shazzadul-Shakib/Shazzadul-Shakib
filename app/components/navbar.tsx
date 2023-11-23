@@ -3,12 +3,12 @@ import Image from "next/image";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export default function Navbar() {
-  // const scrollToTop = () => {
-  //   scroll.scrollToTop();
-  // };
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
-    <main className="w-[90%] sticky top-0 mx-auto text-white flex justify-between items-center px-2 py-4 md:px-4 md:py-4 md:w-[80%]">
+    <main className=" sticky top-0 bg-[#4C516D] bg-opacity-20 text-white flex justify-between items-center px-2 py-4 md:px-10 md:py-4">
       <div>
         <ScrollLink
           to="hero"
