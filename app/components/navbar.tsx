@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <main className=" sticky top-0 bg-[#4C516D] bg-opacity-20 text-white flex justify-between items-center px-2 py-4 md:px-10 md:py-4">
+    <main className=" sticky top-0 bg-[#4C516D] bg-opacity-20 text-white flex justify-between items-center px-2 py-4 md:px-10 md:py-2">
       <div>
         <ScrollLink
           to="hero"
