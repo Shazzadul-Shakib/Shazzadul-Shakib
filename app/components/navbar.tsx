@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <main className=" sticky top-0 bg-[#4C516D] bg-opacity-20 text-white flex justify-between items-center px-2 py-4 md:px-10 md:py-2">
+    <main className=" sticky top-0 bg-[#4C516D] bg-opacity-20 text-white flex justify-between items-center px-2 py-1 md:px-10">
       <div>
         <ScrollLink
           to="hero"
@@ -20,8 +20,8 @@ export default function Navbar() {
         >
           <Image
             src="/logoW.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             className="h-[40px] w-[40px] md:h-auto md:w-auto"
             priority={true}
             alt="Logo"
