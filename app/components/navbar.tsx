@@ -8,7 +8,7 @@ export default function Navbar() {
   };
 
   return (
-    <main className=" sticky top-0 text-white flex justify-between items-center px-2 py-2 md:px-10 ">
+    <main className=" text-white flex justify-between items-center px-2 py-2 md:px-10 ">
       <div>
         <ScrollLink
           to="hero"
@@ -31,16 +31,6 @@ export default function Navbar() {
       <div>
         <div className="hidden md:block">
           <ScrollLink
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
-          >
-            About
-          </ScrollLink>
-          <ScrollLink
             to="skills"
             spy={true}
             smooth={true}
@@ -51,14 +41,14 @@ export default function Navbar() {
             Skills
           </ScrollLink>
           <ScrollLink
-            to="works"
+            to="projects"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
           >
-            Works
+            Projects
           </ScrollLink>
           <ScrollLink
             to="resume"

@@ -80,10 +80,6 @@ export const BackEnd: SkillItem[] = [
     title: "Mongoose",
   },
   {
-    icon: <SiMongoose className="text-2xl" />,
-    title: "Mongoose",
-  },
-  {
     icon: <IoLogoFirebase className="text-2xl" />,
     title: "Firebase",
   },
