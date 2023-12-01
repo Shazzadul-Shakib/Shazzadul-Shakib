@@ -7,12 +7,12 @@ export default function Skills() {
         <h1 className="w-[10%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] ">
           Skills
         </h1>
-        <section className=" w-[80%] mx-auto">
+        <section className=" w-full md:w-[80%] mx-auto">
           <div className="border rounded-md m-3 p-4 ">
             <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
               Front-end
             </h1>
-            <div className="w-[60%] mx-auto py-2 flex flex-wrap gap-10">
+            <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
               {FrontEnd.map((skill) => (
                 <div className="flex flex-col justify-center items-center ">
                   <div>{skill.icon}</div>
@@ -21,12 +21,12 @@ export default function Skills() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex flex-col  md:flex-row md:justify-center">
             <div className="border rounded-md m-3 p-4 ">
               <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
                 Back-end
               </h1>
-              <div className="w-[80%] mx-auto py-3 flex flex-wrap gap-10">
+              <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
                 {BackEnd.map((skill) => (
                   <div className="flex flex-col justify-center items-center ">
                     <div>{skill.icon}</div>
@@ -39,7 +39,7 @@ export default function Skills() {
               <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
                 Tools
               </h1>
-              <div className=" w-[80%] mx-auto py-3 flex flex-wrap gap-10">
+              <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
                 {Tools.map((skill) => (
                   <div className="flex flex-col justify-center items-center ">
                     <div>{skill.icon}</div>
