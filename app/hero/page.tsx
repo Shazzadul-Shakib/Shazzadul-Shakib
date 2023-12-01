@@ -6,7 +6,10 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 export default function Hero() {
   return (
-    <main id="hero" className="flex gap-10 pt-52 bg-[url('/logoB.png')] bg-no-repeat bg-[center_right_16rem] bg-blend-darken md:gap-48">
+    <main
+      id="hero"
+      className="flex gap-10 pt-52 bg-[url('/logoB.png')] bg-no-repeat bg-[length:300px_300px] bg-[center_right]  md:bg-[center_right_16rem] md:bg-auto md:gap-48"
+    >
       <div className=" ml-4">
         <div className="flex flex-col items-center justify-center">
           <div className="h-[100px] bg-white w-0.5 my-4 "></div>
@@ -17,7 +20,7 @@ export default function Hero() {
         </div>
       </div>
       <div>
-        <div className="">
+        <div>
           <h1 className="text-white text-3xl font-bold md:text-7xl">
             Shazzadul Islam Shakib
           </h1>
