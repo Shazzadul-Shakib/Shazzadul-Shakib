@@ -1,4 +1,4 @@
-import { FrontEnd } from "@/utils/skillIcons";
+import { FrontEnd,BackEnd,Tools } from "@/utils/skillIcons";
 
 export default function Skills() {
   return (
@@ -12,7 +12,7 @@ export default function Skills() {
             <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
               Front-end
             </h1>
-            <div className="w-[70%] mx-auto py-2 flex flex-wrap gap-10">
+            <div className="w-[60%] mx-auto py-2 flex flex-wrap gap-10">
               {FrontEnd.map((skill) => (
                 <div className="flex flex-col justify-center items-center ">
                   <div>{skill.icon}</div>
@@ -23,18 +23,30 @@ export default function Skills() {
           </div>
           <div className="flex justify-center">
             <div className="border rounded-md m-3 p-4 ">
-              <h1 className="text-xl text-center text-[#EF403A]">Back-end</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus, ab!
-              </p>
+              <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
+                Back-end
+              </h1>
+              <div className="w-[80%] mx-auto py-3 flex flex-wrap gap-10">
+                {BackEnd.map((skill) => (
+                  <div className="flex flex-col justify-center items-center ">
+                    <div>{skill.icon}</div>
+                    <p className="text-sm">{skill.title}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="border rounded-md m-3 p-4 ">
-              <h1 className="text-xl text-center text-[#EF403A]">Tools</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus, ab!
-              </p>
+              <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
+                Tools
+              </h1>
+              <div className=" w-[80%] mx-auto py-3 flex flex-wrap gap-10">
+                {Tools.map((skill) => (
+                  <div className="flex flex-col justify-center items-center ">
+                    <div>{skill.icon}</div>
+                    <p className="text-sm">{skill.title}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
