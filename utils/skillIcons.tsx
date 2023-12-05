@@ -12,7 +12,7 @@ import {
   SiTailwindcss,
   SiVercel,
 } from "react-icons/si";
-import { TbBrandNextjs, TbBrandVscode } from "react-icons/tb";
+import { TbBrandGraphql, TbBrandNextjs, TbBrandVscode } from "react-icons/tb";
 
 type SkillItem = {
   icon: JSX.Element;
@@ -82,6 +82,10 @@ export const BackEnd: SkillItem[] = [
   {
     icon: <IoLogoFirebase className="text-2xl" />,
     title: "Firebase",
+  },
+  {
+    title: "Rest Api",
+    icon: <TbBrandGraphql className="text-2xl" />,
   },
 ];
 

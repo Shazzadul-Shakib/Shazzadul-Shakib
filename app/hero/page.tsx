@@ -25,7 +25,7 @@ export default function Hero() {
             Shazzadul Islam Shakib
           </h1>
           <h2 className=" text-gray-400 text-lg font-semibold italic my-5 md:text-xl">
-            Front-end Developer
+            Front-End Developer
           </h2>
         </div>
         <div className="flex items-center">
