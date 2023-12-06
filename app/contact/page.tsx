@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <main id="contact">
       <div className="w-[90%] mx-auto pb-4 my-14 rounded-md text-white ">
-        <h1 className="w-[20%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] ">
+        <h1 className="w-[40%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] md:w-[20%]">
           Let's Talk.
         </h1>
       </div>

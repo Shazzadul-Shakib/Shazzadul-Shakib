@@ -2,8 +2,11 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <main id="projects" className=" w-[90%]  mx-auto mb-10 text-white md:w-[70%] ">
-      <h1 className="w-[15%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] ">
+    <main
+      id="projects"
+      className=" w-[90%]  mx-auto mb-10 text-white md:w-[70%] "
+    >
+      <h1 className="w-[40%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] md:w-[15%]">
         Projects
       </h1>
       <section>
