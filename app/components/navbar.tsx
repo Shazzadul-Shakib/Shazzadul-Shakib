@@ -51,14 +51,14 @@ export default function Navbar() {
             Projects
           </ScrollLink>
           <ScrollLink
-            to="resume"
+            to="contact"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             className="ml-14 py-2 font-bold text-gray-400 hover:border-b-2 border-[#EF403A] cursor-pointer"
           >
-            Resume
+            Contact
           </ScrollLink>
         </div>
       </div>
