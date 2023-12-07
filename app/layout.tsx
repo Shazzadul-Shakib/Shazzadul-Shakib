@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { League } from "./ui/font";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Shazzadul Islam Shakib",
@@ -18,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={League.className}>
         <Navbar/>
         {children}
         <Footer/>
