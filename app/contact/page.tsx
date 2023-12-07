@@ -1,3 +1,6 @@
+import {  Submit } from "@/actions/contact";
+import { revalidatePath } from "next/cache";
+
 export default function Contact() {
   return (
     <main id="contact" className="mt-16">
@@ -7,7 +10,8 @@ export default function Contact() {
         </h1>
       </div>
       <section>
-        <form className=" w-[70%] mx-auto md:w-[30%]">
+  
+        <form action={Submit} className=" w-[70%] mx-auto md:w-[30%]">
           <div>
             <label className=" text-sm text-white" htmlFor="name">
               Name*
