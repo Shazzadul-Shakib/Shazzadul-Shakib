@@ -1,6 +1,11 @@
-import {  Submit } from "@/actions/contact";
+'use client'
+
+import { Submit } from "@/actions/contact";
+import { useFormStatus } from "react-dom";
 
 export default function Contact() {
+  const { pending } = useFormStatus();
+  
   return (
     <main id="contact" className="mt-16">
       <div className="w-[90%] mx-auto pb-4 my-14 rounded-md text-white ">
@@ -9,8 +14,11 @@ export default function Contact() {
         </h1>
       </div>
       <section>
-  
-        <form action={Submit} className=" w-[70%] mx-auto md:w-[30%]">
+        <form
+          id="formId"
+          action={Submit}
+          className=" w-[70%] mx-auto md:w-[30%]"
+        >
           <div>
             <label className=" text-sm text-white" htmlFor="name">
               Name*
@@ -52,9 +60,10 @@ export default function Contact() {
             </div>
           </div>
           <input
+            aria-disabled={pending}
             className="text-white text-sm bg-[#005FA8] hover:bg-[#EF403A] px-4 py-2 rounded-md my-8 font-bold"
             type="submit"
-            value="Send Message"
+            value={pending ? "Loading.." : "Send Message"}
           />
         </form>
       </section>
