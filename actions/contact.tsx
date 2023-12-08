@@ -1,5 +1,7 @@
 'use server'
 
+import { transporter, mailOptions } from "@/config/nodemailer";
+
 
  function ContactInfo(formData: FormData) {
    const name = formData.get("name");
@@ -12,6 +14,16 @@
    };
  }
 export async function Submit(formData: FormData) {
-  const contactInfo = ContactInfo(formData);
-  console.log(contactInfo);
+  const {name,email,message} = ContactInfo(formData);
+  
+  try {
+    transporter.sendMail({
+      ...mailOptions,
+      subject: "Message from portfolio.",
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    });
+    
+  } catch (error) {
+    console.log(error);
+  }
 }

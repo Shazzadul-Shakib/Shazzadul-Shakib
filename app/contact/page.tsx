@@ -1,5 +1,4 @@
 import {  Submit } from "@/actions/contact";
-import { revalidatePath } from "next/cache";
 
 export default function Contact() {
   return (
