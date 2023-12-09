@@ -1,10 +1,12 @@
 'use client'
 
 import { Submit } from "@/actions/contact";
+import { useRef } from "react";
 import { useFormStatus } from "react-dom";
 
 export default function Contact() {
   const { pending } = useFormStatus();
+  const ref = useRef<HTMLFormElement>(null);
   
   return (
     <main id="contact" className="mt-16">
@@ -15,8 +17,11 @@ export default function Contact() {
       </div>
       <section>
         <form
-          id="formId"
-          action={Submit}
+          ref={ref}
+          action={async (FormData) => {
+            await Submit(FormData);
+            ref.current?.reset();
+          }}
           className=" w-[70%] mx-auto md:w-[30%]"
         >
           <div>
@@ -59,12 +64,12 @@ export default function Contact() {
               />
             </div>
           </div>
-          <input
+          <button
             aria-disabled={pending}
-            className="text-white text-sm bg-[#005FA8] hover:bg-[#EF403A] px-4 py-2 rounded-md my-8 font-bold"
+            className="text-white text-sm bg-[#005FA8] hover:bg-[#EF403A] px-4
+            py-2 rounded-md my-8 font-bold"
             type="submit"
-            value={pending ? "Loading.." : "Send Message"}
-          />
+          >{pending ? "Loading.." : "Send Message"}</button>
         </form>
       </section>
     </main>
