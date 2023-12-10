@@ -14,7 +14,10 @@ export default function Skills() {
             </h1>
             <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
               {FrontEnd.map((skill) => (
-                <div className="flex flex-col justify-center items-center ">
+                <div
+                  key={skill.title}
+                  className="flex flex-col justify-center items-center "
+                >
                   <div>{skill.icon}</div>
                   <p className="text-sm">{skill.title}</p>
                 </div>
@@ -28,7 +31,10 @@ export default function Skills() {
               </h1>
               <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
                 {BackEnd.map((skill) => (
-                  <div className="flex flex-col justify-center items-center ">
+                  <div
+                    key={skill.title}
+                    className="flex flex-col justify-center items-center "
+                  >
                     <div>{skill.icon}</div>
                     <p className="text-sm">{skill.title}</p>
                   </div>
@@ -41,7 +47,10 @@ export default function Skills() {
               </h1>
               <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
                 {Tools.map((skill) => (
-                  <div className="flex flex-col justify-center items-center ">
+                  <div
+                    key={skill.title}
+                    className="flex flex-col justify-center items-center "
+                  >
                     <div>{skill.icon}</div>
                     <p className="text-sm">{skill.title}</p>
                   </div>
