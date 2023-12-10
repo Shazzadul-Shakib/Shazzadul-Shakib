@@ -29,12 +29,14 @@ export default function Projects() {
                   Pet-Planetoid
                 </h1>
                 <p className="text-white text-sm my-3">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Error et ipsa magni beatae illo cumque alias tenetur fugit
-                  aperiam odio autem consectetur repellat perspiciatis
-                  doloribus, incidunt itaque nostrum. Quam perferendis eaque
-                  repellat dignissimos earum nostrum minima esse perspiciatis
-                  fugiat explicabo.
+                  This web application is fully responsive and functional. You
+                  can effortlessly add posts featuring images of your pets and
+                  engage with them through likes and comments. Access to certain
+                  routes is protected, requiring sign-in and email verification.
+                  Within these protected routes, you can create posts, view
+                  others' content, and interact with them by liking and
+                  commenting. Additionally, you can explore users' profiles to
+                  see the posts and personal information they have shared.
                 </p>
               </div>
               <div className="text-center flex flex-col gap-3 justify-end items-center mt-5 md:flex-row">
@@ -86,12 +88,13 @@ export default function Projects() {
                   Do-Bot-Done
                 </h1>
                 <p className="text-white text-sm my-3">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Error et ipsa magni beatae illo cumque alias tenetur fugit
-                  aperiam odio autem consectetur repellat perspiciatis
-                  doloribus, incidunt itaque nostrum. Quam perferendis eaque
-                  repellat dignissimos earum nostrum minima esse perspiciatis
-                  fugiat explicabo.
+                  Do-Bot-Done is an amaizing web application that efficiently tracks your daily to-dos,
+                  allowing you to seamlessly add, update, and delete tasks as
+                  needed. It provides a convenient way to monitor your daily
+                  activities. Please note that this version is still in
+                  development and not yet stable; I am actively working on
+                  enhancements to ensure a more reliable and robust version in
+                  the future.
                 </p>
               </div>
               <div className="text-center flex flex-col gap-3 justify-end items-center mt-5 md:flex-row">
