@@ -13,9 +13,22 @@ export default function Hero() {
       <div className=" ml-4">
         <div className="flex flex-col items-center justify-center">
           <div className="h-[100px] bg-white w-0.5 my-4 "></div>
-          <FaGithub className="fill-gray-400 text-3xl" />
-          <FaLinkedin className="fill-gray-400 text-3xl my-5" />
-          <FaFacebook className="fill-gray-400 text-3xl" />
+          <a href="https://github.com/Shazzadul-Shakib" target="_blank">
+            <FaGithub className="fill-gray-400 text-3xl" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shazzadul-islam-shakib/"
+            target="_blank"
+          >
+            <FaLinkedin className="fill-gray-400 text-3xl my-5" />
+          </a>
+          <a
+            href="https://www.facebook.com/shazzadulislam.shakib.9/"
+            target="_blank"
+          >
+            <FaFacebook className="fill-gray-400 text-3xl" />
+          </a>
+
           <div className="h-[100px] bg-white w-0.5 my-4 "></div>
         </div>
       </div>
