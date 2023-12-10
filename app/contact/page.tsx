@@ -19,8 +19,8 @@ export default function Contact() {
         <form
           ref={ref}
           action={async (FormData) => {
-            await Submit(FormData);
-            ref.current?.reset();
+              await Submit(FormData);
+              ref.current?.reset();
           }}
           className=" w-[70%] mx-auto md:w-[30%]"
         >
@@ -34,6 +34,7 @@ export default function Contact() {
                 autoComplete="off"
                 name="name"
                 type="text"
+                required
               />
             </div>
           </div>
@@ -47,6 +48,7 @@ export default function Contact() {
                 autoComplete="off"
                 name="email"
                 type="email"
+                required
               />
             </div>
           </div>
@@ -61,15 +63,20 @@ export default function Contact() {
                 name="message"
                 cols={30}
                 rows={8}
+                required
               />
             </div>
           </div>
           <button
-            aria-disabled={pending}
+            aria-disabled={
+              pending
+            }
             className="text-white text-sm bg-[#005FA8] hover:bg-[#EF403A] px-4
             py-2 rounded-md my-8 font-bold"
             type="submit"
-          >{pending ? "Loading.." : "Send Message"}</button>
+          >
+            {pending ? "Loading.." : "Send Message"}
+          </button>
         </form>
       </section>
     </main>
