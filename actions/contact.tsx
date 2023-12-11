@@ -26,7 +26,7 @@ export async function Submit(formData: FormData) {
   const {name,email,message} = ContactInfo(formData);
 
   try {
-    transporter.sendMail({
+    await transporter.sendMail({
       ...mailOptions,
       subject: "Message from portfolio.",
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
