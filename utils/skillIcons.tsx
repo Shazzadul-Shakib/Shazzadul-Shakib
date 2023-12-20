@@ -22,7 +22,7 @@ type SkillItem = {
 export const FrontEnd: SkillItem[] = [
   {
     icon: <FaHtml5 className="text-2xl" />,
-    title: "Html5",
+    title: "HTML5",
   },
   {
     icon: <FaCss3 className="text-2xl" />,
