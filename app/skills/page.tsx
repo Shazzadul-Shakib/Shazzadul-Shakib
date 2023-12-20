@@ -3,7 +3,7 @@ import { FrontEnd,BackEnd,Tools } from "@/utils/skillIcons";
 export default function Skills() {
   return (
     <main id="skills">
-      <div className="w-[90%] mx-auto pb-4 my-10 rounded-md text-white ">
+      <div className="w-[90%] mx-auto pb-4 mb-10 rounded-md text-white ">
         <h1 className=" w-[40%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] md:w-[10%]">
           Skills
         </h1>
@@ -19,7 +19,7 @@ export default function Skills() {
                   className="flex flex-col justify-center items-center "
                 >
                   <div>{skill.icon}</div>
-                  <p className="text-sm">{skill.title}</p>
+                  <p className="text-lg">{skill.title}</p>
                 </div>
               ))}
             </div>
@@ -36,7 +36,7 @@ export default function Skills() {
                     className="flex flex-col justify-center items-center "
                   >
                     <div>{skill.icon}</div>
-                    <p className="text-sm">{skill.title}</p>
+                    <p className="text-lg">{skill.title}</p>
                   </div>
                 ))}
               </div>
@@ -52,7 +52,7 @@ export default function Skills() {
                     className="flex flex-col justify-center items-center "
                   >
                     <div>{skill.icon}</div>
-                    <p className="text-sm">{skill.title}</p>
+                    <p className="text-lg">{skill.title}</p>
                   </div>
                 ))}
               </div>
