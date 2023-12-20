@@ -4,7 +4,7 @@ export default function Projects() {
   return (
     <main
       id="projects"
-      className=" w-[90%] mx-auto min-h-screen mb-10 text-white md:w-[70%] "
+      className=" w-[90%] mx-auto mb-10 text-white md:w-[70%] "
     >
       <h1 className="w-[40%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] md:w-[15%]">
         Projects
@@ -28,7 +28,7 @@ export default function Projects() {
                 <h1 className="text-[#EF403A] text-xl font-bold">
                   Pet-Planetoid
                 </h1>
-                <p className="text-white text-sm my-3">
+                <p className="text-white my-3">
                   This web application is fully responsive and functional. You
                   can effortlessly add posts featuring images of your pets and
                   engage with them through likes and comments. Access to certain
@@ -87,7 +87,7 @@ export default function Projects() {
                 <h1 className="text-[#EF403A] text-xl font-bold">
                   Do-Bot-Done
                 </h1>
-                <p className="text-white text-sm my-3">
+                <p className="text-white my-3">
                   Do-Bot-Done is an amaizing web application that efficiently tracks your daily to-dos,
                   allowing you to seamlessly add, update, and delete tasks as
                   needed. It provides a convenient way to monitor your daily

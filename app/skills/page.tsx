@@ -3,7 +3,7 @@ import { FrontEnd,BackEnd,Tools } from "@/utils/skillIcons";
 export default function Skills() {
   return (
     <main id="skills">
-      <div className="w-[90%] min-h-screen mx-auto pb-4 my-10 rounded-md text-white ">
+      <div className="w-[90%] mx-auto pb-4 my-10 rounded-md text-white ">
         <h1 className=" w-[40%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] md:w-[10%]">
           Skills
         </h1>
