@@ -1,10 +1,15 @@
-
+'use client'
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { saveAs } from "file-saver";
 
 export default function Hero() {
+  const downloadResume = () => {
+    const resumePath = "/Shazzadul_Islam_Shakib_Resume.pdf";
+    saveAs(resumePath, "Shazadul_Islam_Shakib_Resume.pdf");
+  };
   return (
     <main
       id="hero"
@@ -56,11 +61,14 @@ export default function Hero() {
           <p className=" text-gray-200 text-lg w-[75%] mb-3 ">
             When not working or futzing around with code, I study how to escape
             from University. Actually
-            <span className="text-[#EF403A] text-base">for hire</span>.
+            <span className="text-[#EF403A] text-base"> for hire</span>.
           </p>
         </div>
         <div className="flex items-center">
-          <button className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md">
+          <button
+            onClick={downloadResume}
+            className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
+          >
             Resume
           </button>
           <HiArrowLongRight className=" text-4xl text-white -ml-2" />

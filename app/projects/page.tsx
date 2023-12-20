@@ -28,7 +28,7 @@ export default function Projects() {
                 <h1 className="text-[#EF403A] text-xl font-bold">
                   Pet-Planetoid
                 </h1>
-                <p className="text-white my-3 text-lg">
+                <p className="text-white mt-3 text-lg">
                   This web application is fully responsive and functional. You
                   can effortlessly add posts featuring images of your pets and
                   engage with them through likes and comments. Access to certain
@@ -37,6 +37,12 @@ export default function Projects() {
                   others' content, and interact with them by liking and
                   commenting. Additionally, you can explore users' profiles to
                   see the posts and personal information they have shared.
+                </p>
+                <p className=" text-[#EF403A]">
+                  Technology used : {" "}
+                  <span className="text-sm text-white">
+                    React.js · Express.js · MongoDB · Tailwind CSS · Firebase
+                  </span>
                 </p>
               </div>
               <div className="text-center flex flex-col gap-3 justify-end items-center mt-5 md:flex-row">
@@ -87,14 +93,20 @@ export default function Projects() {
                 <h1 className="text-[#EF403A] text-xl font-bold">
                   Do-Bot-Done
                 </h1>
-                <p className="text-white my-3 text-lg">
-                  Do-Bot-Done is an amaizing web application that efficiently tracks your daily to-dos,
-                  allowing you to seamlessly add, update, and delete tasks as
-                  needed. It provides a convenient way to monitor your daily
-                  activities. Please note that this version is still in
-                  development and not yet stable; I am actively working on
-                  enhancements to ensure a more reliable and robust version in
-                  the future.
+                <p className="text-white mt-3 text-lg">
+                  Do-Bot-Done is an amaizing web application that efficiently
+                  tracks your daily to-dos, allowing you to seamlessly add,
+                  update, and delete tasks as needed. It provides a convenient
+                  way to monitor your daily activities. Please note that this
+                  version is still in development and not yet stable; I am
+                  actively working on enhancements to ensure a more reliable and
+                  robust version in the future.
+                </p>
+                <p className=" text-[#EF403A]">
+                  Technology used :{" "}
+                  <span className="text-sm text-white">
+                    React.js · Express.js · MongoDB · Tailwind CSS · Firebase
+                  </span>
                 </p>
               </div>
               <div className="text-center flex flex-col gap-3 justify-end items-center mt-5 md:flex-row">

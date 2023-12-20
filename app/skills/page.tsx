@@ -12,7 +12,7 @@ export default function Skills() {
             <h1 className="text-xl font-bold text-center text-[#EF403A] pb-2">
               Front-end
             </h1>
-            <div className="w-full py-3 flex flex-wrap gap-7 md:gap-10 md:w-[80%] md:mx-auto">
+            <div className="w-full py-3 flex flex-wrap gap-5 md:gap-10 md:w-[80%] md:mx-auto">
               {FrontEnd.map((skill) => (
                 <div
                   key={skill.title}
