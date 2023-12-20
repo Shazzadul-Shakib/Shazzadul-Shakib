@@ -30,12 +30,12 @@ export default function Contact() {
           className=" w-[70%] mx-auto md:w-[30%]"
         >
           <div>
-            <label className=" text-sm text-white" htmlFor="name">
+            <label className=" text-lg text-white" htmlFor="name">
               Name*
             </label>
             <div>
               <input
-                className="w-full p-1 border-b-2 outline-none bg-inherit text-white focus:border-[#005FA8] text-xs"
+                className="w-full p-1 border-b-2 outline-none bg-inherit text-white focus:border-[#005FA8] "
                 autoComplete="off"
                 name="name"
                 type="text"
@@ -44,12 +44,12 @@ export default function Contact() {
             </div>
           </div>
           <div className="my-5">
-            <label className=" text-sm text-white" htmlFor="email">
+            <label className=" text-lg text-white" htmlFor="email">
               Email*
             </label>
             <div>
               <input
-                className="w-full p-1 border-b-2 outline-none bg-inherit text-white focus:border-[#005FA8] text-xs"
+                className="w-full p-1 border-b-2 outline-none bg-inherit text-white focus:border-[#005FA8] "
                 autoComplete="off"
                 name="email"
                 type="email"
@@ -58,12 +58,12 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <label className=" text-sm text-white" htmlFor="message">
+            <label className=" text-lg text-white" htmlFor="message">
               Message *
             </label>
             <div>
               <textarea
-                className="w-full p-1 border-b-2 outline-none bg-inherit text-white focus:border-[#005FA8] text-xs"
+                className="w-full p-1 border-b-2 outline-none bg-inherit text-white focus:border-[#005FA8] "
                 autoComplete="off"
                 name="message"
                 cols={30}

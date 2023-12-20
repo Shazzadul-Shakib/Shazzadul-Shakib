@@ -40,7 +40,7 @@ export default function Hero() {
           <h2 className=" text-gray-400 text-lg font-semibold italic my-2 md:text-xl">
             Front-End Developer
           </h2>
-          <p className="text-gray-200 text-base w-[95%] py-3 rounded-md md:w-[75%]">
+          <p className="text-gray-200 text-lg w-[95%] py-3 rounded-md md:w-[75%]">
             Passionate and innovative front-end developer specializing in{" "}
             <span className="text-[#EF403A] text-base"> React</span> , with a
             keen eye for crafting visually appealing and{" "}
@@ -53,7 +53,7 @@ export default function Hero() {
             performant user experiences that elevate digital landscapes. Let's
             transform ideas into captivating web realities together.
           </p>
-          <p className=" text-gray-200 text-base w-[75%] mb-3 ">
+          <p className=" text-gray-200 text-lg w-[75%] mb-3 ">
             When not working or futzing around with code, I study how to escape
             from University. Actually
             <span className="text-[#EF403A] text-base">for hire</span>.

@@ -28,7 +28,7 @@ export default function Projects() {
                 <h1 className="text-[#EF403A] text-xl font-bold">
                   Pet-Planetoid
                 </h1>
-                <p className="text-white my-3">
+                <p className="text-white my-3 text-lg">
                   This web application is fully responsive and functional. You
                   can effortlessly add posts featuring images of your pets and
                   engage with them through likes and comments. Access to certain
@@ -87,7 +87,7 @@ export default function Projects() {
                 <h1 className="text-[#EF403A] text-xl font-bold">
                   Do-Bot-Done
                 </h1>
-                <p className="text-white my-3">
+                <p className="text-white my-3 text-lg">
                   Do-Bot-Done is an amaizing web application that efficiently tracks your daily to-dos,
                   allowing you to seamlessly add, update, and delete tasks as
                   needed. It provides a convenient way to monitor your daily
