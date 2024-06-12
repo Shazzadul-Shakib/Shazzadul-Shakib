@@ -10,20 +10,14 @@
 
 ### Current Overview
 <h5>
-   <table align="left" style="border:none;">
-  <tr style="border:none;">
-    <td width="100%">
-      <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
-      <p><strong>💼 I’m ready to work -></strong></p>
-      <ul>
-        <li><strong>Languages:</strong> JavaScript, TypeScript</li>
-        <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query | ExpressJS, Mongoose, Node Mailer</li>
-        <li><strong>Database:</strong> MongoDB</li>
-        <li><strong>Tools:</strong> Git, GitHub, REST-API</li>
-      </ul>
-    </td>
-  </tr>
-</table> 
+   <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
+   <p><strong>💼 I’m ready to work -></strong></p>
+   <ul>
+     <li><strong>Languages:</strong> JavaScript, TypeScript</li>
+     <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query | ExpressJS, Mongoose, Node Mailer</li>
+     <li><strong>Database:</strong> MongoDB</li>
+     <li><strong>Tools:</strong> Git, GitHub, REST-API</li>
+   </ul>
 </h5>
 
 ---
