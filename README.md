@@ -9,8 +9,8 @@
 ---
 
 ### Current Overview
-<div>
-    <table align="left" style="border:none;">
+<h5>
+   <table align="left" style="border:none;">
   <tr style="border:none;">
     <td width="100%">
       <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
@@ -23,14 +23,14 @@
       </ul>
     </td>
   </tr>
-</table>
-</div>
+</table> 
+</h5>
 
 ---
 
 ### My Statistics
 
-<div align="center">
+<h4 align="center">
 <table align="center" style="border:none;">
   <tr style="border:none;">
     <td width="50%" align="center">
@@ -43,7 +43,7 @@
     </td>
   </tr>
 </table>
-</div>
+</h4>
 
 ---
 
