@@ -6,6 +6,8 @@
 </tr>
 </table>
 
+---
+
 ## About Me || [Resume](https://drive.google.com/file/d/1kSYoUcT_84ti3Ewfk9CZJkF1j7nn5gJC/view?usp=sharing)
 
 **<p>Hello, I'm Shazzadul Islam Shakib, a dedicated front-end developer with a strong enthusiasm for crafting sophisticated and functional web applications.I am experienced with a solid foundation in HTML, CSS, JavaScript, ReactJs, NextJs, and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>**
@@ -31,6 +33,7 @@
 </tr>
 </table>
 
+---
 
 <h3 align="center">My Statistics:</h3>
 <p align="center">
