@@ -1,4 +1,4 @@
-<img align="center" alt="Coding" width="450" src="https://repository-images.githubusercontent.com/588181932/e36ec678-7984-4cdd-8e4c-a3932772ff8e">
+<h1 width="100%" align="center" ><img align="center" alt="Coding" width="450" src="https://repository-images.githubusercontent.com/588181932/e36ec678-7984-4cdd-8e4c-a3932772ff8e"></h1>
 
 ---
 
@@ -24,12 +24,11 @@
     </td>
   </tr>
 </table>
-<br/>
 
 ---
 
-<h3 align="center">My Statistics:</h3>
-<p align="center">
+### My Statistics:
+<h1 align="center">
 <table align="center" style="border:none;">
   <tr style="border:none;">
     <td width="50%" align="center">
@@ -42,7 +41,7 @@
     </td>
   </tr>
 </table>
-</p>
+</h1>
 
 ---
 
