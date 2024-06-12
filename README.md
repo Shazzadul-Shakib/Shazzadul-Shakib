@@ -9,7 +9,8 @@
 ---
 
 ### Current Overview
-  <table align="left" style="border:none;">
+<div>
+    <table align="left" style="border:none;">
   <tr style="border:none;">
     <td width="100%">
       <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
@@ -23,12 +24,13 @@
     </td>
   </tr>
 </table>
+</div>
 
 ---
 
 ### My Statistics
 
-<h1 align="center">
+<div align="center">
 <table align="center" style="border:none;">
   <tr style="border:none;">
     <td width="50%" align="center">
@@ -41,11 +43,11 @@
     </td>
   </tr>
 </table>
-</h1>
+</div>
 
 ---
 
-<h3 align="center">Connect with me:</h3>
+### Connect with me
 <p align="center">
 <a href="https://www.linkedin.com/in/shazzadul-islam-shakib" target="_blank"><img align="center" src="https://github.com/tandpfun/skill-icons/blob/main/icons/LinkedIn.svg" alt="shazzadul_shakib" height="50" width="50" /></a>
 <a href="https://www.facebook.com/shazzadulislam.shakib.9" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Shazzadul Shakib" height="50" width="50" /></a>
