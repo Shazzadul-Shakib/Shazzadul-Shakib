@@ -1,9 +1,9 @@
 <table align="left" style="border:none;">
-<tr style="border:none;">
-<td width="100%">
-<img align="center" alt="Coding" width="450" src="https://repository-images.githubusercontent.com/588181932/e36ec678-7984-4cdd-8e4c-a3932772ff8e">
-</td>
-</tr>
+  <tr style="border:none;">
+    <td width="100%">
+      <img align="center" alt="Coding" width="450" src="https://repository-images.githubusercontent.com/588181932/e36ec678-7984-4cdd-8e4c-a3932772ff8e">
+    </td>
+  </tr>
 </table>
 
 ---
@@ -14,23 +14,21 @@
 
 ---
 
-<table align="left" style="border:none;">
-<tr style="border:none;">
-<td width="100%">
-
 ### Current Overview
 
-**🥅 Goals of 2024 🥅** - **Become Full Stack (MERN) Developer**
-
-**💼 I’m ready to work ->**
-
-- **Languages:** JavaScript, TypeScript
-- **Technologies:** ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query | ExpressJS, Mongoose, Node Mailer
-- **Database:** MongoDB
-- **Tools:** Git, GitHub, REST-API
-
-</td>
-</tr>
+<table align="left" style="border:none;">
+  <tr style="border:none;">
+    <td width="100%">
+      <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
+      <p><strong>💼 I’m ready to work -></strong></p>
+      <ul>
+        <li><strong>Languages:</strong> JavaScript, TypeScript</li>
+        <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query | ExpressJS, Mongoose, Node Mailer</li>
+        <li><strong>Database:</strong> MongoDB</li>
+        <li><strong>Tools:</strong> Git, GitHub, REST-API</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 ---
@@ -38,19 +36,16 @@
 <h3 align="center">My Statistics:</h3>
 <p align="center">
 <table align="center" style="border:none;">
-<tr style="border:none;">
-<td width="50%" align="center">
-
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&theme=dark&show_icons=true&count_private=true" />
-  <br><br>
-  <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Shazzadul Shakib's streak" src="https://github-readme-streak-stats.herokuapp.com/?user=Shazzadul-Shakib&theme=dark&hide_border=false" /> 
-</td>
-<td width="50%" align="center">
-
-  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=Shazzadul-Shakib&theme=dark&hide_border=false&no-bg=true&no-frame=true&langs_count=10"/>
-  
-</td>
-</tr>
+  <tr style="border:none;">
+    <td width="50%" align="center">
+      <img align="center" src="https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&theme=dark&show_icons=true&count_private=true" />
+      <br><br>
+      <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Shazzadul Shakib's streak" src="https://github-readme-streak-stats.herokuapp.com/?user=Shazzadul-Shakib&theme=dark&hide_border=false" /> 
+    </td>
+    <td width="50%" align="center">
+      <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=Shazzadul-Shakib&theme=dark&hide_border=false&no-bg=true&no-frame=true&langs_count=10"/>
+    </td>
+  </tr>
 </table>
 </p>
 
