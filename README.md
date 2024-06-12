@@ -9,8 +9,6 @@
 ---
 
 ### Current Overview
-
-<h1>
   <table align="left" style="border:none;">
   <tr style="border:none;">
     <td width="100%">
@@ -25,11 +23,11 @@
     </td>
   </tr>
 </table>
-</h1>
 
 ---
 
-### My Statistics:
+### My Statistics
+
 <h1 align="center">
 <table align="center" style="border:none;">
   <tr style="border:none;">
