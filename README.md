@@ -10,7 +10,8 @@
 
 ### Current Overview
 
-<table align="left" style="border:none;">
+<h1>
+  <table align="left" style="border:none;">
   <tr style="border:none;">
     <td width="100%">
       <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
@@ -24,6 +25,7 @@
     </td>
   </tr>
 </table>
+</h1>
 
 ---
 
