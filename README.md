@@ -1,5 +1,5 @@
 <p align="center" ><img  src = "https://github.com/7oSkaaa/7oSkaaa/blob/main/Images/about_me.gif?raw=true" width = 100px></p>
-## About Me || [Resume](https://drive.google.com/file/d/1kSYoUcT_84ti3Ewfk9CZJkF1j7nn5gJC/view?usp=sharing)
+## About Me || [Resume][resume]
 
 **<p>Hello, I'm Shazzadul Islam Shakib, a dedicated front-end developer with a strong enthusiasm for crafting sophisticated and functional web applications.I am experienced with a solid foundation in HTML, CSS, JavaScript, ReactJs, NextJs, and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>**
 
@@ -48,6 +48,7 @@
 </tr>
 </table>
 
+[resume]:https://drive.google.com/file/d/1kSYoUcT_84ti3Ewfk9CZJkF1j7nn5gJC/view?usp=sharing
 ---
 
 <h3 align="center">Connect with me:</h3>
