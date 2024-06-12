@@ -1,9 +1,18 @@
+<table align="left">
+<tr border="none">
+<td width="100%">
 <img align="center" alt="Coding" width="450" src="https://repository-images.githubusercontent.com/588181932/e36ec678-7984-4cdd-8e4c-a3932772ff8e">
+</td>
+</tr>
+</table>
+
 ## About Me || [Resume](https://drive.google.com/file/d/1kSYoUcT_84ti3Ewfk9CZJkF1j7nn5gJC/view?usp=sharing)
 
 **<p>Hello, I'm Shazzadul Islam Shakib, a dedicated front-end developer with a strong enthusiasm for crafting sophisticated and functional web applications.I am experienced with a solid foundation in HTML, CSS, JavaScript, ReactJs, NextJs, and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>**
 
-<table align="center">
+---
+
+<table align="left">
 <tr border="none">
 <td width="100%">
   
