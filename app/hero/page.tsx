@@ -7,7 +7,7 @@ import { saveAs } from "file-saver";
 
 export default function Hero() {
   const downloadResume = () => {
-    const resumePath = "/Shazzadul_Islam_Shakib_Resume.pdf";
+    const resumePath = "/Shazzadul_Islam_Shakib_Frontend_Developer_resume.pdf";
     saveAs(resumePath, "Shazadul_Islam_Shakib_Resume.pdf");
   };
   return (
