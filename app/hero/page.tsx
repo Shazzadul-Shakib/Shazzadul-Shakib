@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
@@ -7,7 +7,7 @@ import { saveAs } from "file-saver";
 
 export default function Hero() {
   const downloadResume = () => {
-    const resumePath = "/Shazzadul_Islam_Shakib_Front_end_developer_resume.pdf";
+    const resumePath = "/Shazzadul_Islam_Shakib_Resume.pdf";
     saveAs(resumePath, "Shazadul_Islam_Shakib_Resume.pdf");
   };
   return (
@@ -64,14 +64,25 @@ export default function Hero() {
             <span className="text-[#EF403A] text-base"> for hire</span>.
           </p>
         </div>
-        <div className="flex items-center">
-          <button
-            onClick={downloadResume}
-            className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
-          >
-            Resume
-          </button>
-          <HiArrowLongRight className=" text-4xl text-white -ml-2" />
+        <div className="flex items-center gap-4">
+          <div className="flex items-center">
+            <button
+              onClick={downloadResume}
+              className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
+            >
+              Download Resume
+            </button>
+          </div>
+          <div className="flex items-center">
+            <a
+              href="https://drive.google.com/file/d/1IeXajVUl-HxWtDg6hWUMNZwtq8-2phVR/view?usp=sharing"
+              target="_blank"
+              className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
+            >
+              Resume
+            </a>
+            <HiArrowLongRight className=" text-4xl text-white -ml-2" />
+          </div>
         </div>
       </div>
     </main>

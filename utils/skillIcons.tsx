@@ -1,16 +1,27 @@
-import { FaHtml5, FaCss3, FaBootstrap, FaReact, FaNodeJs, FaNpm, FaFigma, FaGitAlt, FaGithub } from "react-icons/fa6";
+import {
+  FaHtml5,
+  FaCss3,
+  FaBootstrap,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa6";
 import { IoLogoFirebase, IoLogoJavascript } from "react-icons/io5";
-import { BiLogoNetlify } from "react-icons/bi";
 import {
   SiCanva,
   SiExpress,
+  SiJsonwebtokens,
   SiMongodb,
   SiMongoose,
+  SiPostman,
   SiReactquery,
   SiReactrouter,
   SiRedux,
   SiTailwindcss,
+  SiTypescript,
   SiVercel,
+  SiZod,
 } from "react-icons/si";
 import { TbBrandGraphql, TbBrandNextjs, TbBrandVscode } from "react-icons/tb";
 
@@ -31,6 +42,10 @@ export const FrontEnd: SkillItem[] = [
   {
     icon: <IoLogoJavascript className="text-2xl" />,
     title: "JavaScript",
+  },
+  {
+    icon: <SiTypescript className="text-xl" />,
+    title: "TypeScript",
   },
   {
     icon: <FaBootstrap className="text-2xl" />,
@@ -60,6 +75,10 @@ export const FrontEnd: SkillItem[] = [
     icon: <SiReactquery className="text-2xl" />,
     title: "React-query",
   },
+  {
+    icon: <IoLogoFirebase className="text-2xl" />,
+    title: "Firebase Auth",
+  },
 ];
 
 export const BackEnd: SkillItem[] = [
@@ -80,8 +99,12 @@ export const BackEnd: SkillItem[] = [
     title: "Mongoose",
   },
   {
-    icon: <IoLogoFirebase className="text-2xl" />,
-    title: "Firebase",
+    icon: <SiJsonwebtokens className="text-2xl" />,
+    title: "JWT",
+  },
+  {
+    icon: <SiZod className="text-2xl" />,
+    title: "Zod",
   },
   {
     title: "Rest Api",
@@ -95,14 +118,6 @@ export const Tools: SkillItem[] = [
     title: "Vscode",
   },
   {
-    icon: <FaNpm className="text-2xl" />,
-    title: "npm",
-  },
-  {
-    icon: <FaFigma className="text-2xl" />,
-    title: "Figma",
-  },
-  {
     icon: <FaGitAlt className="text-2xl" />,
     title: "Git",
   },
@@ -111,15 +126,11 @@ export const Tools: SkillItem[] = [
     title: "Github",
   },
   {
-    icon: <SiCanva className="text-2xl" />,
-    title: "Canva",
-  },
-  {
     icon: <SiVercel className="text-2xl" />,
     title: "Vercel",
   },
   {
-    icon: <BiLogoNetlify className="text-2xl" />,
-    title: "Netlify",
+    icon: <SiPostman className="text-2xl" />,
+    title: "Postman",
   },
 ];

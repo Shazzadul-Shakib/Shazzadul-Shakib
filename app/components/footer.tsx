@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-xs text-white text-center">
-        &copy; 2023 All right reserved by Shazzadul Islam Shakib
+        &copy; 2024 All right reserved by - Shazzadul Islam Shakib
       </div>
     </main>
   );
