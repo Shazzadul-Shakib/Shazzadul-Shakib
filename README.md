@@ -16,7 +16,7 @@
      <li><strong>Languages:</strong> JavaScript, TypeScript</li>
      <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query | ExpressJS, Mongoose, Node Mailer</li>
      <li><strong>Database:</strong> MongoDB</li>
-     <li><strong>Tools:</strong> Git, GitHub, REST-API</li>
+     <li><strong>Tools:</strong>  VsCode, Git, GitHub, REST-API, Postman</li>
    </ul>
 </h5>
 
