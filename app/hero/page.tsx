@@ -6,10 +6,6 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import { saveAs } from "file-saver";
 
 export default function Hero() {
-  const downloadResume = () => {
-    const resumePath = "/Shazzadul_Islam_Shakib_Resume.pdf";
-    saveAs(resumePath, "Shazadul_Islam_Shakib_Resume.pdf");
-  };
   return (
     <main
       id="hero"
@@ -64,15 +60,7 @@ export default function Hero() {
             <span className="text-[#EF403A] text-base"> for hire</span>.
           </p>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center">
-            <button
-              onClick={downloadResume}
-              className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
-            >
-              Download Resume
-            </button>
-          </div>
+        <div className="flex items-center gap-4 mb-14">
           <div className="flex items-center">
             <a
               href="https://drive.google.com/file/d/1IeXajVUl-HxWtDg6hWUMNZwtq8-2phVR/view?usp=sharing"
