@@ -9,7 +9,7 @@ export default function Projects() {
       <h1 className="w-[40%] mx-auto text-center text-2xl font-bold pb-2 mb-10 border-b-2 border-[#EF403A] md:w-[15%]">
         Projects
       </h1>
-      <section>
+      <section className="grid gap-10">
         {/* Project-1 */}
         <div className="flex flex-col gap-3 my-5 md:my-10 md:flex-row justify-center items-center md:gap-10">
           <div className=" h-[250px] border-2 relative overflow-hidden rounded-md md:w-[35%]">
