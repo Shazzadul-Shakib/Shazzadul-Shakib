@@ -10,7 +10,7 @@
 
 ### Current Overview
 <h5>
-   <p><strong>🥅 Goals of 2024 🥅</strong> - <strong>Become Full Stack (MERN) Developer</strong></p>
+   <p><strong>🥅 Goals of 2025 🥅</strong> - <strong>Lean PostgreSQL, GraphQL and AI integration</strong></p>
    <p><strong>💼 I’m ready to work -></strong></p>
    <ul>
      <li><strong>Languages:</strong> JavaScript, TypeScript</li>
