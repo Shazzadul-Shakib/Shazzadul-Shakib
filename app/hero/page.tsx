@@ -63,7 +63,7 @@ export default function Hero() {
         <div className="flex items-center gap-4 mb-14">
           <div className="flex items-center">
             <a
-              href="https://drive.google.com/file/d/1IeXajVUl-HxWtDg6hWUMNZwtq8-2phVR/view?usp=sharing"
+              href="https://drive.google.com/file/d/14LxGtWoKiMbKUJxVqq7kB6CHFo4P1KpQ/view"
               target="_blank"
               className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
             >
