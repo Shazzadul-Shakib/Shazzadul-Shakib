@@ -2,7 +2,7 @@
 
 ---
 
-## About Me || [Resume](https://drive.google.com/file/d/14LxGtWoKiMbKUJxVqq7kB6CHFo4P1KpQ/view)
+## About Me || [Resume]([https://drive.google.com/file/d/1eV34o00ZI29mAzzTgGbJm1tpv0MJ2gsq/view])
 
 <p>Hello, I'm Shazzadul Islam Shakib, a dedicated Full Stack Developer with a strong enthusiasm for crafting sophisticated and functional web applications. I am experienced with a solid foundation in JavaScript, ReactJs, NextJs, ExpressJs, NodeJs, MongoDB and PostgreSQL and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>
 
