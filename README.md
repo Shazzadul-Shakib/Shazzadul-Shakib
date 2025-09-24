@@ -14,8 +14,8 @@
    <p><strong>💼 I’m ready to work -></strong></p>
    <ul>
      <li><strong>Languages:</strong> JavaScript, TypeScript</li>
-     <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query, Socket.Io, Zod | ExpressJS, Mongoose, JWT </li>
-     <li><strong>Database:</strong> MongoDB</li>
+     <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query, Socket.Io, Zod | ExpressJS, Mongoose, JWT, Prisma</li>
+     <li><strong>Database:</strong> MongoDB , PostgreSQL</li>
      <li><strong>Tools:</strong>  VsCode, Git, GitHub, REST-API, Postman</li>
    </ul>
 </h5>

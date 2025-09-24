@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { saveAs } from "file-saver";
 
 export default function Hero() {
   return (
@@ -39,31 +38,52 @@ export default function Hero() {
             Shazzadul Islam Shakib
           </h1>
           <h2 className=" text-gray-400 text-lg font-semibold italic my-2 md:text-xl">
-            Front-End Developer
+            Full Stack Developer
           </h2>
           <p className="text-gray-200 text-lg w-[95%] py-3 rounded-md md:w-[75%]">
-            Passionate and innovative front-end developer specializing in{" "}
-            <span className="text-[#EF403A] text-base"> React</span> , with a
-            keen eye for crafting visually appealing and{" "}
+            Passionate and adaptable{" "}
             <span className="text-[#EF403A] text-base">
-              user-friendly interfaces
+              Full-Stack Developer
             </span>{" "}
-            . Leveraging a strong foundation in modern web technologies, I am
-            dedicated to creating seamless,
-            <span className="text-[#EF403A] text-base">responsive</span> , and
-            performant user experiences that elevate digital landscapes. Let's
-            transform ideas into captivating web realities together.
+            specializing in the{" "}
+            <span className="text-[#EF403A] text-base">MERN stack</span> and{" "}
+            <span className="text-[#EF403A] text-base">PostgreSQL</span>, with a
+            strong commitment to building{" "}
+            <span className="text-[#EF403A] text-base">scalable</span>,{" "}
+            <span className="text-[#EF403A] text-base">secure</span>, and{" "}
+            <span className="text-[#EF403A] text-base">high-performing</span>{" "}
+            applications. Skilled in both{" "}
+            <span className="text-[#EF403A] text-base">front-end</span> and{" "}
+            <span className="text-[#EF403A] text-base">back-end</span>{" "}
+            development, I craft seamless{" "}
+            <span className="text-[#EF403A] text-base">user experiences</span>{" "}
+            supported by efficient{" "}
+            <span className="text-[#EF403A] text-base">server-side logic</span>.
+            I am always{" "}
+            <span className="text-[#EF403A] text-base">excited to learn</span>{" "}
+            and embrace{" "}
+            <span className="text-[#EF403A] text-base">new technologies</span>{" "}
+            to adapt quickly, overcome challenges, and deliver{" "}
+            <span className="text-[#EF403A] text-base">
+              impactful solutions
+            </span>
+            . Let's transform ideas into powerful{" "}
+            <span className="text-[#EF403A] text-base">
+              full-stack realities
+            </span>{" "}
+            together.
           </p>
+
           <p className=" text-gray-200 text-lg w-[75%] mb-3 ">
-            When not working or futzing around with code, I study how to escape
-            from University. Actually
+            When not working or tinkering with code, I study how to escape
+            infinite bug loops. Actually
             <span className="text-[#EF403A] text-base"> for hire</span>.
           </p>
         </div>
         <div className="flex items-center gap-4 mb-14">
           <div className="flex items-center">
             <a
-              href="https://drive.google.com/file/d/14LxGtWoKiMbKUJxVqq7kB6CHFo4P1KpQ/view"
+              href="https://drive.google.com/file/d/1eV34o00ZI29mAzzTgGbJm1tpv0MJ2gsq/view"
               target="_blank"
               className="bg-[#EF403A] px-4 py-2 text-white font-semibold rounded-md"
             >
