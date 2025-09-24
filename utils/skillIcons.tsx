@@ -9,15 +9,18 @@ import {
 } from "react-icons/fa6";
 import { IoLogoFirebase, IoLogoJavascript } from "react-icons/io5";
 import {
-  SiCanva,
   SiExpress,
   SiJsonwebtokens,
   SiMongodb,
   SiMongoose,
+  SiPostgresql,
   SiPostman,
+  SiPrisma,
   SiReactquery,
   SiReactrouter,
   SiRedux,
+  SiRender,
+  SiSocketdotio,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
@@ -109,6 +112,18 @@ export const BackEnd: SkillItem[] = [
   {
     title: "Rest Api",
     icon: <TbBrandGraphql className="text-2xl" />,
+  },
+  {
+    title: "PostgreSQL",
+    icon: <SiPostgresql className="text-2xl" />,
+  },
+  {
+    title: "Prisma",
+    icon: <SiPrisma className="text-2xl" />,
+  },
+  {
+    title: "Socket.io",
+    icon: <SiSocketdotio className="text-2xl" />,
   },
 ];
 
