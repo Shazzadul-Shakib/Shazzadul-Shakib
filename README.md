@@ -4,13 +4,13 @@
 
 ## About Me || [Resume](https://drive.google.com/file/d/1eV34o00ZI29mAzzTgGbJm1tpv0MJ2gsq/view)
 
-<p>Hello, I'm Shazzadul Islam Shakib, a dedicated Full Stack Developer with a strong enthusiasm for crafting sophisticated and functional web applications. I am experienced with a solid foundation in JavaScript, ReactJs, NextJs, ExpressJs, NestJs, NodeJs, MongoDB and PostgreSQL and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>
+<p>I'm Shazzadul Islam Shakib, a dedicated Full Stack Developer with a strong enthusiasm for crafting sophisticated and functional web applications. I am experienced with a solid foundation in JavaScript, Typescript, ReactJs, NextJs, ExpressJs, NestJs, NodeJs, MongoDB and PostgreSQL and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>
 
 ---
 
 ### Current Overview
 <h5>
-   <p><strong>🥅 Goals of 2025 🥅</strong> - <strong>Learn Docker and GraphQL </strong></p>
+   <p><strong>🥅 Goals of 2025 🥅</strong> - <strong>Learn Docker, Redis and GraphQL </strong></p>
    <p><strong>💼 I’m ready to work -></strong></p>
    <ul>
      <li><strong>Languages:</strong> JavaScript, TypeScript</li>
