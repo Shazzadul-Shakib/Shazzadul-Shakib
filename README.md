@@ -4,7 +4,7 @@
 
 ## About Me || [Resume](https://drive.google.com/file/d/1eV34o00ZI29mAzzTgGbJm1tpv0MJ2gsq/view)
 
-<p>I'm Shazzadul Islam Shakib, a dedicated and self taught Full Stack Developer with a strong enthusiasm for crafting sophisticated and functional web applications. I am experienced with a solid foundation in JavaScript, Typescript, ReactJs, NextJs, ExpressJs, NestJs, NodeJs, MongoDB and PostgreSQL and other frameworks. I am continuously driven by the pursuit of new skills and technologies to elevate my web development expertise, ensuring that I stay at the forefront of the industry.</p>
+<p>I'm Shazzadul Islam Shakib, a dedicated and self taught Full Stack Developer with a strong enthusiasm for crafting sophisticated and functional web applications. Software Engineer with 2.5+ years of experience building scalable full-stack applications using React, Next.js, Node.js, and MongoDB. Skilled in performance optimization, clean architecture, and efficient state management with Redux Toolkit and Zustand. Strong problem-solver with hands-on experience across the full stack development. A quick learner and team player focused on delivering reliable and efficient software.</p>
 
 ---
 
