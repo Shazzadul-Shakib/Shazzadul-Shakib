@@ -10,13 +10,14 @@
 
 ### Current Overview
 <h5>
-   <p><strong>🥅 Goals of 2025 🥅</strong> - <strong>Learn Docker, Redis and GraphQL </strong></p>
+   <p><strong>🥅 Goals of 2025 🥅</strong> - <strong>Learn Redis and GraphQL </strong></p>
    <p><strong>💼 I’m ready to work -></strong></p>
    <ul>
      <li><strong>Languages:</strong> JavaScript, TypeScript</li>
-     <li><strong>Technologies:</strong> ReactJS, NextJS, TailwindCSS, Redux, React Hook Form, React Query, Socket.Io, Zod | ExpressJS, NestJS, Mongoose, JWT, Prisma</li>
-     <li><strong>Database:</strong> MongoDB , PostgreSQL</li>
-     <li><strong>Tools:</strong>  VsCode, Git, GitHub, REST-API, Postman, Swagger</li>
+     <li><strong>Front End:</strong> ReactJS, NextJS, Next Auth, TailwindCSS, Redux Toolkit, React Query, React Hook Form, Zustand, Socket.io, Websocket, Framer motion.</li>
+     <li><strong>Back End:</strong> NodeJs, ExpressJs, NestJs, Mongoose, Prisma, Socket.io.</li>
+     <li><strong>Database:</strong> MongoDB, PostgreSQL, MySQL.</li>
+     <li><strong>Tools:</strong> Git, VS Code, Swagger, Postman, Vercel, Docker.</li>
    </ul>
 </h5>
 
