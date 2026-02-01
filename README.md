@@ -23,13 +23,12 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
 
 ## 🚀 Projects
 
-- **[Automa-AI](https://your-live-site.com)** - AI-powered automation platform with real-time workflows and intelligent insights
-- **[E-Commerce Hub](https://your-live-site.com)** - Full-stack online marketplace with payment integration and admin dashboard
-- **[Task Manager Pro](https://your-live-site.com)** - Collaborative project management tool with team collaboration features
-- **[Weather Dashboard](https://your-live-site.com)** - Real-time weather app with interactive maps and forecasting
-- **[Portfolio Builder](https://your-live-site.com)** - Drag-and-drop portfolio creator for developers and designers
-- **[Chat Application](https://your-live-site.com)** - Real-time messaging platform with WebSocket support
-- **[Blog Platform](https://your-live-site.com)** - Modern blogging system with markdown support and SEO optimization
+- **[Accord-AI](https://accord-ai-client.vercel.app)** - Topic-based real-time chats and generate AI-powered summaries of their conversations
+- **[FlowBuilder](https://flow-builder-client.vercel.app)** - Building and testing email automation workflows.
+- **[ORS Tracker](https://ors-tracker-client-kappa.vercel.app)** - Manage Operational Roadworthiness Scores (ORS) with role-based features.
+- **[ProjectGate](https://project-gate-client.vercel.app)** - Role-Based Project Management System.
+- **[Twin Credits](https://twin-credits-client.vercel.app)** - A referral and credit system, enabling users to earn rewards, manage credits, and access digital products seamlessly.
+- **[Raptor Tech Landing page](https://raptortechltd-mu.vercel.app)** - Landing page for Raptortech Ltd.
 
 ## 📊 GitHub Stats
 
