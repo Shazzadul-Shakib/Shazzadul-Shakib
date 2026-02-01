@@ -31,15 +31,11 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
 - **[Chat Application](https://your-live-site.com)** - Real-time messaging platform with WebSocket support
 - **[Blog Platform](https://your-live-site.com)** - Modern blogging system with markdown support and SEO optimization
 
-## �📊 GitHub Stats
+## 📊 GitHub Stats
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&theme=dark&show_icons=true&count_private=true&hide_border=true" height="170" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shazzadul-Shakib&theme=dark&hide_border=true" height="170" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shazzadul-Shakib&theme=dark&hide_border=true&layout=compact" height="170" />
 </div>
 
 ## 🤝 Connect
