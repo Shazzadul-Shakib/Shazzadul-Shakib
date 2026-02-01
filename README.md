@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm Shazzadul Islam Shakib
 
-**Full Stack Developer** | 2+ Years Experience | [📄 Resume](https://drive.google.com/file/d/1kBVcGBo2_6lh2iTkxSLHeZO4ZS9czptM/view?usp=sharing)
+**Full Stack Developer** | 2+ Years Experience | [Resume](https://drive.google.com/file/d/1kBVcGBo2_6lh2iTkxSLHeZO4ZS9czptM/view?usp=sharing)
 
 Building scalable web applications with modern tech • Clean architecture • Performance optimization
 
@@ -34,8 +34,13 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&theme=dark&show_icons=true&count_private=true&hide_border=true" height="170" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shazzadul-Shakib&theme=dark&hide_border=true" height="170" />
+  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&theme=tokyonight&show_icons=true&hide_border=true&count_private=true)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Shazzadul-Shakib&theme=tokyonight&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shazzadul-Shakib&theme=tokyonight&hide_border=true&layout=compact&langs_count=8)
+
 </div>
 
 ## 🤝 Connect
