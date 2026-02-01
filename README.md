@@ -35,11 +35,11 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
 
 <div align="center">
   
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&theme=tokyonight&show_icons=true&hide_border=true&count_private=true)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&show_icons=true&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Shazzadul-Shakib&theme=tokyonight&hide_border=true)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=Shazzadul-Shakib&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shazzadul-Shakib&theme=tokyonight&hide_border=true&layout=compact&langs_count=8)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shazzadul-Shakib&layout=compact&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
 
 </div>
 
