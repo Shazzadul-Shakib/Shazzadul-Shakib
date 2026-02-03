@@ -24,6 +24,7 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
 ## 🚀 Projects
 
 - **[Accord-AI](https://accord-ai-client.vercel.app)** - Topic-based real-time chats and generate AI-powered summaries of their conversations
+- **[MovieLab](https://movie-lab-mu.vercel.app)** - Responsive movie browsing application using The Movie Database(TMDB) API.
 - **[FlowBuilder](https://flow-builder-client.vercel.app)** - Building and testing email automation workflows.
 - **[ORS Tracker](https://ors-tracker-client-kappa.vercel.app)** - Manage Operational Roadworthiness Scores (ORS) with role-based features.
 - **[ProjectGate](https://project-gate-client.vercel.app)** - Role-Based Project Management System.
