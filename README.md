@@ -9,7 +9,7 @@ Building scalable web applications with modern tech • Clean architecture • P
 </div>
 
 ## 🎯 2026 Goals
-Learning AWS, CI/CD & System Design to level up as a Software Engineer
+Learning AWS, React Native, GraphQL & System Design to level up as a Software Engineer
 
 ## 💻 Tech Stack
 
@@ -18,7 +18,7 @@ Languages:    JavaScript, TypeScript
 Frontend:     ReactJS, NextJS, Next Auth, TailwindCSS, Redux Toolkit, React Query, React Hook Form, Zustand, Socket.io, Websocket, Framer motion, React Flow
 Backend:      NodeJs, ExpressJs, NestJs, Mongoose, Prisma, Socket.io
 Database:     MongoDB, PostgreSQL, MySQL
-Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
+Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Actions
 ```
 
 ## 🚀 Projects
@@ -34,12 +34,8 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker
 ## 📊 GitHub Stats
 
 <div align="center">
-  
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shazzadul-Shakib&show_icons=true&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=Shazzadul-Shakib&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
-
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shazzadul-Shakib&layout=compact&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
 
 </div>
 
