@@ -30,6 +30,7 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Acti
 - **[ProjectGate](https://project-gate-client.vercel.app)** - Role-Based Project Management System.
 - **[Twin Credits](https://twin-credits-client.vercel.app)** - A referral and credit system, enabling users to earn rewards, manage credits, and access digital products seamlessly.
 - **[Raptor Tech Landing page](https://raptortechltd-mu.vercel.app)** - Landing page for Raptortech Ltd.
+- **[Zalmi Technology](https://zalmi.bd/)** - Company website for Zalmi Technology.
 
 ## 📊 GitHub Stats
 
