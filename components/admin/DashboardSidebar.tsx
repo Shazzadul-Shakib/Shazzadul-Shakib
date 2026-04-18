@@ -10,6 +10,7 @@ import {
   HiPencilSquare,
   HiArrowLeftOnRectangle,
   HiGlobeAlt,
+  HiEnvelope,
   HiBars3,
   HiXMark,
 } from 'react-icons/hi2';
@@ -17,6 +18,7 @@ import {
 const menuItems = [
   { label: 'Dashboard', href: '/admin/dashboard', Icon: HiHome },
   { label: 'Blogs', href: '/admin/dashboard/blogs', Icon: HiPencilSquare },
+  { label: 'Messages', href: '/admin/dashboard/messages', Icon: HiEnvelope },
   {
     label: 'Portfolio Content',
     href: '/admin/dashboard/content',

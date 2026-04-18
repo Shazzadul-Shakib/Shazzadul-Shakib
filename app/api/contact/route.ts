@@ -1,15 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { rateLimit } from '@/lib/rateLimit';
+import { connectDB } from '@/lib/db';
 import { contactSchema } from '@/lib/validations';
-import nodemailer from 'nodemailer';
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER || 'shakib1186@gmail.com',
-    pass: process.env.PASS,
-  },
-});
+import Message from '@/models/Message';
 
 export async function POST(req: NextRequest) {
   const ip =
@@ -37,23 +31,19 @@ export async function POST(req: NextRequest) {
 
     const { name, email, message } = parsed.data;
 
-    await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'shakib1186@gmail.com',
-      to: 'shakib1186@gmail.com',
-      subject: `Portfolio Contact from ${name}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px;">
-          <h2 style="color: #8D4A8A;">New Portfolio Message</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong></p>
-          <p style="background: #F0D299; color: #3A0353; padding: 16px; border-radius: 8px;">${message}</p>
-        </div>
-      `,
+    await connectDB();
+    await Message.create({
+      name,
+      email,
+      message,
+      isRead: false,
     });
 
+    revalidatePath('/admin/dashboard');
+    revalidatePath('/admin/dashboard/messages');
+
     return NextResponse.json(
-      { message: 'Message sent successfully!' },
+      { message: 'Message received successfully!' },
       { status: 200 },
     );
   } catch (error) {

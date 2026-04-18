@@ -5,22 +5,26 @@ import Blog from '@/models/Blog';
 import Skill from '@/models/Skill';
 import Project from '@/models/Project';
 import Experience from '@/models/Experience';
+import Message from '@/models/Message';
 
 export const metadata: Metadata = { title: 'Admin Dashboard' };
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 async function getStats() {
   try {
     await connectDB();
-    const [blogs, skills, projects, experiences] = await Promise.all([
+    const [blogs, skills, projects, experiences, messages] = await Promise.all([
       Blog.countDocuments({}),
       Skill.countDocuments({}),
       Project.countDocuments({}),
       Experience.countDocuments({}),
+      Message.countDocuments({}),
     ]);
 
-    return { blogs, skills, projects, experiences };
+    return { blogs, skills, projects, experiences, messages };
   } catch {
-    return { blogs: 0, skills: 0, projects: 0, experiences: 0 };
+    return { blogs: 0, skills: 0, projects: 0, experiences: 0, messages: 0 };
   }
 }
 
@@ -38,12 +42,13 @@ export default async function AdminDashboardPage() {
         </p>
       </div>
 
-      <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
+      <div className='grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8'>
         {[
           { label: 'Blogs', value: stats.blogs },
           { label: 'Skills', value: stats.skills },
           { label: 'Projects', value: stats.projects },
           { label: 'Experiences', value: stats.experiences },
+          { label: 'Messages', value: stats.messages },
         ].map((card) => (
           <div
             key={card.label}
@@ -59,7 +64,7 @@ export default async function AdminDashboardPage() {
         ))}
       </div>
 
-      <div className='grid md:grid-cols-2 gap-6'>
+      <div className='grid md:grid-cols-3 gap-6'>
         <Link
           href='/admin/dashboard/blogs'
           className='rounded-2xl border border-border-glass bg-white/[0.03] p-6 hover:border-accent-violet/40 transition-all'
@@ -80,6 +85,17 @@ export default async function AdminDashboardPage() {
           </h2>
           <p className='text-text-muted text-sm mt-2'>
             CRUD skills, projects, and experiences shown on your homepage.
+          </p>
+        </Link>
+        <Link
+          href='/admin/dashboard/messages'
+          className='rounded-2xl border border-border-glass bg-white/[0.03] p-6 hover:border-accent-violet/40 transition-all'
+        >
+          <h2 className='text-xl font-grotesk font-semibold text-text-primary'>
+            Manage Messages
+          </h2>
+          <p className='text-text-muted text-sm mt-2'>
+            Read incoming contact messages, mark read/unread, and delete them.
           </p>
         </Link>
       </div>
