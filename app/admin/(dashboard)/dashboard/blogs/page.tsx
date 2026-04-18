@@ -6,6 +6,9 @@ import Button from '@/components/ui/Button';
 import { HiPlus, HiPencil, HiEye, HiEyeSlash } from 'react-icons/hi2';
 import DeleteBlogButton from '@/components/admin/DeleteBlogButton';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 async function getBlogs() {
   try {
     await connectDB();

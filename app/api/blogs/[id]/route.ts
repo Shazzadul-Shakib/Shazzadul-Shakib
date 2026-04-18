@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
-import { auth } from "@/lib/auth";
-import { connectDB } from "@/lib/db";
-import Blog from "@/models/Blog";
-import { blogSchema } from "@/lib/validations";
+import { NextRequest, NextResponse } from 'next/server';
+import { auth } from '@/lib/auth';
+import { connectDB } from '@/lib/db';
+import Blog from '@/models/Blog';
+import { blogSchema } from '@/lib/validations';
+import { revalidatePath } from 'next/cache';
 
 type Params = { params: Promise<{ id: string }> };
 
@@ -18,12 +19,15 @@ export async function GET(_req: NextRequest, { params }: Params) {
     }).lean();
 
     if (!blog) {
-      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+      return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
     }
 
     return NextResponse.json({ blog }, { status: 200 });
   } catch {
-    return NextResponse.json({ error: "Failed to fetch blog" }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to fetch blog' },
+      { status: 500 },
+    );
   }
 }
 
@@ -31,7 +35,7 @@ export async function GET(_req: NextRequest, { params }: Params) {
 export async function PUT(req: NextRequest, { params }: Params) {
   const session = await auth();
   if (!session) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   try {
@@ -41,17 +45,28 @@ export async function PUT(req: NextRequest, { params }: Params) {
     const parsed = blogSchema.safeParse(body);
 
     if (!parsed.success) {
-      return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
+      return NextResponse.json(
+        { error: parsed.error.flatten() },
+        { status: 400 },
+      );
     }
 
     const blog = await Blog.findByIdAndUpdate(id, parsed.data, { new: true });
     if (!blog) {
-      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+      return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
     }
+
+    revalidatePath('/');
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${blog.slug}`);
+    revalidatePath('/admin/dashboard/blogs');
 
     return NextResponse.json({ blog }, { status: 200 });
   } catch {
-    return NextResponse.json({ error: "Failed to update blog" }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to update blog' },
+      { status: 500 },
+    );
   }
 }
 
@@ -59,7 +74,7 @@ export async function PUT(req: NextRequest, { params }: Params) {
 export async function DELETE(_req: NextRequest, { params }: Params) {
   const session = await auth();
   if (!session) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   try {
@@ -68,11 +83,19 @@ export async function DELETE(_req: NextRequest, { params }: Params) {
     const blog = await Blog.findByIdAndDelete(id);
 
     if (!blog) {
-      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+      return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
     }
 
-    return NextResponse.json({ message: "Blog deleted" }, { status: 200 });
+    revalidatePath('/');
+    revalidatePath('/blog');
+    revalidatePath(`/blog/${blog.slug}`);
+    revalidatePath('/admin/dashboard/blogs');
+
+    return NextResponse.json({ message: 'Blog deleted' }, { status: 200 });
   } catch {
-    return NextResponse.json({ error: "Failed to delete blog" }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to delete blog' },
+      { status: 500 },
+    );
   }
 }
