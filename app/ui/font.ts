@@ -1,3 +1,13 @@
-import { League_Spartan } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 
-export const League = League_Spartan({ weight: ["100" , "200" ,'300' ,'400','500','600','700','800','900'], subsets: ["latin"] });
+export const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
