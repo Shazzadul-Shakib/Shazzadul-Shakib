@@ -1,7 +1,14 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
-export default function MainLayout({ children }: { children: React.ReactNode }) {
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export default function MainLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Navbar />
