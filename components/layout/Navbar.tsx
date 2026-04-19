@@ -17,9 +17,23 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+
+    // Sync immediately on mount/reload before any user scroll occurs.
+    onScroll();
+
+    // Re-check after browser restores scroll position on refresh/navigation.
+    const rafId = window.requestAnimationFrame(onScroll);
+    window.addEventListener('load', onScroll);
+    window.addEventListener('pageshow', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      window.removeEventListener('load', onScroll);
+      window.removeEventListener('pageshow', onScroll);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (pathname !== '/') return;

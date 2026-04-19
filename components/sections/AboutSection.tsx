@@ -1,9 +1,12 @@
 import SectionHeading from '@/components/ui/SectionHeading';
 import GlassCard from '@/components/ui/GlassCard';
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll';
-import { aboutStats, siteConfig } from '@/utils/constants';
+import { siteConfig } from '@/utils/constants';
+import { getAboutStats } from '@/lib/aboutStats';
 
-export default function AboutSection() {
+export default async function AboutSection() {
+  const aboutStats = await getAboutStats();
+
   return (
     <section
       id='about'
