@@ -9,7 +9,7 @@ Building scalable web applications with modern tech • Clean architecture • P
 </div>
 
 ## 🎯 2026 Goals
-Learning AWS, React Native, GraphQL & System Design to level up as a Software Engineer
+Learning AWS, Fundamentals in depth & System Design to level up as a Software Engineer
 
 ## 💻 Tech Stack
 
