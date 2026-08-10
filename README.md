@@ -23,7 +23,7 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Acti
 
 ## 🚀 Projects
 
-- **[Exflio](https://github.com/Shazzadul-Shakib/exflio)** - Personal finance tracker with monolothic architecture.
+- **[Exflio](https://exflio.vercel.app)** - Personal finance tracker with monolothic architecture.
 - **[Accord-AI](https://accord-ai-client.vercel.app)** - Topic-based real-time chats and generate AI-powered summaries of their conversations
 - **[MovieLab](https://movie-lab-mu.vercel.app)** - Responsive movie browsing application using The Movie Database(TMDB) API.
 - **[FlowBuilder](https://flow-builder-client.vercel.app)** - Building and testing email automation workflows.
