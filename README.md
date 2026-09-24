@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm Shazzadul Islam Shakib
 
-**Full Stack Developer** | 2+ Years Experience | [Resume](https://drive.google.com/file/d/1kBVcGBo2_6lh2iTkxSLHeZO4ZS9czptM/view?usp=sharing)
+**Full Stack Developer** | 2+ Years Experience | [Resume](https://drive.google.com/file/d/1qcd_-uSK5wOWajg3Uuo0zvpzjgo_y70l/view?usp=drive_link)
 
 Building scalable web applications with modern tech • Clean architecture • Performance optimization
 
