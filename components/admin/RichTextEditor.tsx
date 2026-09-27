@@ -4,7 +4,9 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Placeholder from '@tiptap/extension-placeholder';
 import Image from '@tiptap/extension-image';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import toast from 'react-hot-toast';
+import { uploadImageToCloudinary, ImageUploadError } from '@/lib/uploadImage';
 import {
   FaBold,
   FaItalic,
@@ -14,6 +16,7 @@ import {
   FaCode,
   FaLink,
   FaImage,
+  FaSpinner,
   FaUndo,
   FaRedo,
 } from 'react-icons/fa';
@@ -52,6 +55,8 @@ export default function RichTextEditor({
   content,
   onChange,
 }: RichTextEditorProps) {
+  const imageInputRef = useRef<HTMLInputElement>(null);
+  const [uploadingImage, setUploadingImage] = useState(false);
   const editor = useEditor({
     immediatelyRender: false,
     extensions: [
@@ -86,8 +91,24 @@ export default function RichTextEditor({
   };
 
   const addImage = () => {
-    const url = prompt('Enter image URL:');
-    if (url) editor.chain().focus().setImage({ src: url }).run();
+    imageInputRef.current?.click();
+  };
+
+  const handleImageFile = async (file: File | undefined) => {
+    if (!file) return;
+    setUploadingImage(true);
+    try {
+      const url = await uploadImageToCloudinary(file);
+      editor.chain().focus().setImage({ src: url }).run();
+    } catch (err) {
+      toast.error(
+        err instanceof ImageUploadError
+          ? err.message
+          : 'Upload failed. Please try again.',
+      );
+    } finally {
+      setUploadingImage(false);
+    }
   };
 
   return (
@@ -179,9 +200,23 @@ export default function RichTextEditor({
         >
           <FaLink />
         </ToolbarButton>
-        <ToolbarButton onClick={addImage} title='Insert Image'>
-          <FaImage />
+        <ToolbarButton
+          onClick={addImage}
+          title='Insert Image'
+          active={uploadingImage}
+        >
+          {uploadingImage ? <FaSpinner className='animate-spin' /> : <FaImage />}
         </ToolbarButton>
+        <input
+          ref={imageInputRef}
+          type='file'
+          accept='image/*'
+          hidden
+          onChange={(e) => {
+            void handleImageFile(e.target.files?.[0]);
+            e.target.value = '';
+          }}
+        />
 
         <div className='w-px h-7 bg-border-glass mx-1 self-center' />
 

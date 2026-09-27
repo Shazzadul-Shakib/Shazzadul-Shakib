@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import Button from '@/components/ui/Button';
+import ImageUploadField from '@/components/admin/ImageUploadField';
 import toast from 'react-hot-toast';
 
 type TabType = 'skills' | 'projects' | 'experiences';
@@ -677,23 +678,18 @@ export default function ContentManager() {
                   {projectFieldErrors.description}
                 </p>
               ) : null}
-              <input
-                className={getProjectInputClass('image')}
-                placeholder='Image URL'
+              <ImageUploadField
+                label='Project Image'
                 value={projectForm.image}
-                onChange={(e) => {
+                error={projectFieldErrors.image}
+                onChange={(url) => {
                   clearProjectFieldError('image');
                   setProjectForm((prev) => ({
                     ...prev,
-                    image: e.target.value,
+                    image: url,
                   }));
                 }}
               />
-              {projectFieldErrors.image ? (
-                <p className='-mt-2 text-xs text-red-300'>
-                  {projectFieldErrors.image}
-                </p>
-              ) : null}
               <input
                 className={getProjectInputClass('techCsv')}
                 placeholder='Technologies (comma separated)'

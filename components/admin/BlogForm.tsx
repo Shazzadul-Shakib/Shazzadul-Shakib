@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Button from '@/components/ui/Button';
+import ImageUploadField from '@/components/admin/ImageUploadField';
 import toast from 'react-hot-toast';
 import { slugify } from '@/lib/utils';
 
@@ -136,19 +137,11 @@ export default function BlogForm({ initialData, mode }: BlogFormProps) {
       </div>
 
       {/* Cover Image */}
-      <div className='flex flex-col gap-1.5'>
-        <label className='text-sm font-medium text-text-muted'>
-          Cover Image URL
-        </label>
-        <input
-          className={inputClass}
-          name='coverImage'
-          placeholder='https://...'
-          value={form.coverImage}
-          onChange={change}
-          type='url'
-        />
-      </div>
+      <ImageUploadField
+        label='Cover Image'
+        value={form.coverImage}
+        onChange={(url) => setForm((prev) => ({ ...prev, coverImage: url }))}
+      />
 
       {/* Tags */}
       <div className='flex flex-col gap-1.5'>
