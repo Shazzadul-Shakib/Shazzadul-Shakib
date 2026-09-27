@@ -15,7 +15,7 @@ Learning AWS, Fundamentals in depth & System Design to level up as a Software En
 
 ```yaml
 Languages:    JavaScript, TypeScript
-Frontend:     ReactJS, NextJS, Next Auth, TailwindCSS, Redux Toolkit, React Query, React Hook Form, Zustand, Socket.io, Websocket, Framer motion, React Flow
+Frontend:     ReactJS, NextJS, Next Auth, TailwindCSS, Redux Toolkit, React Query, React Hook Form, Zustand, Socket.io, Websocket, Framer motion, React Flow, Localization
 Backend:      NodeJs, ExpressJs, NestJs, Mongoose, Prisma, Socket.io
 Database:     MongoDB, PostgreSQL, MySQL
 Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Actions
