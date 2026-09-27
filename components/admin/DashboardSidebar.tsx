@@ -11,6 +11,7 @@ import {
   HiArrowLeftOnRectangle,
   HiGlobeAlt,
   HiEnvelope,
+  HiCog6Tooth,
   HiBars3,
   HiXMark,
 } from 'react-icons/hi2';
@@ -23,6 +24,11 @@ const menuItems = [
     label: 'Portfolio Content',
     href: '/admin/dashboard/content',
     Icon: HiSquares2X2,
+  },
+  {
+    label: 'Site Settings',
+    href: '/admin/dashboard/settings',
+    Icon: HiCog6Tooth,
   },
   { label: 'Visit Site', href: '/', Icon: HiGlobeAlt },
 ];

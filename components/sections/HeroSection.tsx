@@ -1,44 +1,49 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { siteConfig, socialLinks } from '@/utils/constants';
+import { socialLinks } from '@/utils/constants';
 import Button from '@/components/ui/Button';
 import { HiArrowLongRight, HiArrowDown } from 'react-icons/hi2';
+import { connectDB } from '@/lib/db';
+import DevInfo from '@/models/DevInfo';
+import { getResumeUrl } from '@/lib/siteSettings';
+import HeroRoleTyper from '@/components/sections/HeroRoleTyper';
+import DevCard, { DevCardItem } from '@/components/sections/DevCard';
 
-const roles = [
-  'Full Stack Developer',
-  'MERN Stack Expert',
-  'React Enthusiast',
-  'Problem Solver',
+const fallbackDevCardItems: DevCardItem[] = [
+  { _id: 'name', key: 'name', value: 'Shakib', valueType: 'string' },
+  {
+    _id: 'stack',
+    key: 'stack',
+    value: "Mostly MERN, but doesn't matter",
+    valueType: 'string',
+  },
+  { _id: 'available', key: 'available', value: 'true', valueType: 'raw' },
+  { _id: 'coffee', key: 'coffee', value: 'Infinity', valueType: 'raw' },
+  { _id: 'Games', key: 'Games', value: 'PUBG', valueType: 'raw' },
+  {
+    _id: 'Sports',
+    key: 'Sports',
+    value: "Any, just let's go",
+    valueType: 'raw',
+  },
 ];
 
-export default function HeroSection() {
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [displayed, setDisplayed] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
+async function getDevCardItems(): Promise<DevCardItem[]> {
+  try {
+    await connectDB();
+    const docs = await DevInfo.find({ visible: true })
+      .sort({ order: 1, createdAt: 1 })
+      .select('key value valueType')
+      .lean();
+    return docs.length ? JSON.parse(JSON.stringify(docs)) : fallbackDevCardItems;
+  } catch {
+    return fallbackDevCardItems;
+  }
+}
 
-  useEffect(() => {
-    const current = roles[roleIndex];
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (!isDeleting && displayed.length < current.length) {
-      timeout = setTimeout(
-        () => setDisplayed(current.slice(0, displayed.length + 1)),
-        80,
-      );
-    } else if (!isDeleting && displayed.length === current.length) {
-      timeout = setTimeout(() => setIsDeleting(true), 2200);
-    } else if (isDeleting && displayed.length > 0) {
-      timeout = setTimeout(
-        () => setDisplayed(current.slice(0, displayed.length - 1)),
-        40,
-      );
-    } else if (isDeleting && displayed.length === 0) {
-      setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayed, isDeleting, roleIndex]);
+export default async function HeroSection() {
+  const [devCardItems, resumeUrl] = await Promise.all([
+    getDevCardItems(),
+    getResumeUrl(),
+  ]);
 
   return (
     <section
@@ -102,17 +107,7 @@ export default function HeroSection() {
               <span className='text-text-primary'>Islam Shakib</span>
             </h1>
 
-            <div
-              className='animate-fade-up flex items-center gap-2 text-xl sm:text-2xl lg:text-3xl font-grotesk font-semibold mb-8 h-12'
-              style={{ animationDelay: '200ms' }}
-            >
-              <span className='text-accent-violet opacity-60'>&lt;</span>
-              <span className='gradient-text min-w-0'>
-                {displayed}
-                <span className='inline-block w-0.5 h-7 bg-accent-violet ml-0.5 align-middle animate-pulse' />
-              </span>
-              <span className='text-accent-violet opacity-60'>/&gt;</span>
-            </div>
+            <HeroRoleTyper />
 
             <p
               className='animate-fade-up text-text-muted text-base sm:text-lg leading-relaxed max-w-xl mb-10'
@@ -136,7 +131,7 @@ export default function HeroSection() {
               style={{ animationDelay: '400ms' }}
             >
               <a
-                href={siteConfig.resumeUrl}
+                href={resumeUrl}
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -144,17 +139,11 @@ export default function HeroSection() {
                   View Resume <HiArrowLongRight className='text-lg' />
                 </Button>
               </a>
-              <Button
-                variant='outline'
-                size='lg'
-                onClick={() =>
-                  document
-                    .getElementById('projects')
-                    ?.scrollIntoView({ behavior: 'smooth' })
-                }
-              >
-                See My Work
-              </Button>
+              <a href='#projects'>
+                <Button variant='outline' size='lg'>
+                  See My Work
+                </Button>
+              </a>
             </div>
 
             {/* Mobile socials */}
@@ -178,63 +167,7 @@ export default function HeroSection() {
           </div>
 
           {/* Code card decoration */}
-          <div className='hidden lg:block flex-shrink-0 animate-float'>
-            <div className='relative'>
-              <div className='absolute -inset-4 bg-gradient-to-r from-accent-violet/20 to-accent-cyan/20 rounded-3xl blur-xl' />
-              <div className='relative bg-surface border border-border-glass rounded-2xl p-6 font-mono text-sm leading-7 min-w-[260px] shadow-2xl'>
-                <div className='flex items-center gap-2 mb-4'>
-                  <div className='w-3 h-3 rounded-full bg-accent-violet/70' />
-                  <div className='w-3 h-3 rounded-full bg-accent-cyan/70' />
-                  <div className='w-3 h-3 rounded-full bg-text-primary/70' />
-                  <span className='text-text-muted text-xs ml-2'>
-                    developer.ts
-                  </span>
-                </div>
-                <div className='text-text-muted'>
-                  <span className='text-accent-violet'>const</span>{' '}
-                  <span className='text-accent-cyan'>dev</span>{' '}
-                  <span className='text-text-primary'>= {'{'}</span>
-                </div>
-                <div className='ml-4'>
-                  <span className='text-accent-violet'>name</span>
-                  <span className='text-text-primary'>: </span>
-                  <span className='text-accent-cyan'>&apos;Shakib&apos;</span>
-                  <span className='text-text-primary'>,</span>
-                </div>
-                <div className='ml-4'>
-                  <span className='text-accent-violet'>stack</span>
-                  <span className='text-text-primary'>: </span>
-                  <span className='text-accent-cyan'>&apos;Mostly MERN, but doesn't matter&apos;</span>
-                  <span className='text-text-primary'>,</span>
-                </div>
-                <div className='ml-4'>
-                  <span className='text-accent-violet'>available</span>
-                  <span className='text-text-primary'>: </span>
-                  <span className='text-orange-400'>true</span>
-                  <span className='text-text-primary'>,</span>
-                </div>
-                <div className='ml-4'>
-                  <span className='text-accent-violet'>coffee</span>
-                  <span className='text-text-primary'>: </span>
-                  <span className='text-orange-400'>Infinity</span>
-                  <span className='text-text-primary'>,</span>
-                </div>
-                <div className='ml-4'>
-                  <span className='text-accent-violet'>Games</span>
-                  <span className='text-text-primary'>: </span>
-                  <span className='text-orange-400'>PUBG</span>
-                  <span className='text-text-primary'>,</span>
-                </div>
-                <div className='ml-4'>
-                  <span className='text-accent-violet'>Sports</span>
-                  <span className='text-text-primary'>: </span>
-                  <span className='text-orange-400'>Any, just let's go</span>
-                  <span className='text-text-primary'>,</span>
-                </div>
-                <div className='text-text-primary'>{'}'}</div>
-              </div>
-            </div>
-          </div>
+          <DevCard items={devCardItems} />
         </div>
       </div>
 

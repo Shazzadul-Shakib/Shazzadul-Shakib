@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { navLinks, socialLinks, siteConfig } from '@/utils/constants';
+import { navLinks, socialLinks } from '@/utils/constants';
 import Button from '@/components/ui/Button';
 import { useEffect } from 'react';
 
@@ -10,6 +10,7 @@ interface MobileMenuProps {
   onNavClick: (href: string) => void;
   activeSection: string;
   pathname: string;
+  resumeUrl: string;
 }
 
 export default function MobileMenu({
@@ -18,6 +19,7 @@ export default function MobileMenu({
   onNavClick,
   activeSection,
   pathname,
+  resumeUrl,
 }: MobileMenuProps) {
   useEffect(() => {
     if (isOpen) document.body.style.overflow = 'hidden';
@@ -116,11 +118,7 @@ export default function MobileMenu({
               </a>
             ))}
           </div>
-          <a
-            href={siteConfig.resumeUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <a href={resumeUrl} target='_blank' rel='noopener noreferrer'>
             <Button className='w-full justify-center'>Hire Me</Button>
           </a>
         </div>

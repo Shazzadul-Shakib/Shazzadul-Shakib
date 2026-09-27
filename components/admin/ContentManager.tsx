@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button';
 import ImageUploadField from '@/components/admin/ImageUploadField';
 import toast from 'react-hot-toast';
 
-type TabType = 'skills' | 'projects' | 'experiences';
+type TabType = 'skills' | 'projects' | 'experiences' | 'devInfo';
 
 type SkillForm = {
   name: string;
@@ -35,6 +35,14 @@ type ExperienceForm = {
   order: string;
 };
 
+type DevInfoForm = {
+  key: string;
+  value: string;
+  valueType: 'string' | 'raw';
+  visible: boolean;
+  order: string;
+};
+
 type DeleteTarget = {
   id: string;
   label: string;
@@ -44,6 +52,7 @@ const tabs: Array<{ label: string; value: TabType }> = [
   { label: 'Skills', value: 'skills' },
   { label: 'Projects', value: 'projects' },
   { label: 'Experiences', value: 'experiences' },
+  { label: 'Dev Card', value: 'devInfo' },
 ];
 
 const initialSkillForm: SkillForm = {
@@ -72,6 +81,14 @@ const initialExperienceForm: ExperienceForm = {
   type: 'Full-time',
   descriptionText: '',
   techCsv: '',
+  order: '0',
+};
+
+const initialDevInfoForm: DevInfoForm = {
+  key: '',
+  value: '',
+  valueType: 'string',
+  visible: true,
   order: '0',
 };
 
@@ -155,6 +172,7 @@ export default function ContentManager() {
     skills: [],
     projects: [],
     experiences: [],
+    devInfo: [],
   });
   const [skillFilterCategory, setSkillFilterCategory] = useState<
     'All' | SkillForm['category']
@@ -175,6 +193,8 @@ export default function ContentManager() {
   const [experienceForm, setExperienceForm] = useState<ExperienceForm>(
     initialExperienceForm,
   );
+  const [devInfoForm, setDevInfoForm] =
+    useState<DevInfoForm>(initialDevInfoForm);
 
   const activeItems = items[tab];
   const filteredItems = useMemo(() => {
@@ -220,6 +240,7 @@ export default function ContentManager() {
     setSkillForm(initialSkillForm);
     setProjectForm(initialProjectForm);
     setExperienceForm(initialExperienceForm);
+    setDevInfoForm(initialDevInfoForm);
     setProjectFieldErrors({});
   };
 
@@ -259,22 +280,32 @@ export default function ContentManager() {
       };
     }
 
+    if (tab === 'experiences') {
+      return {
+        role: experienceForm.role.trim(),
+        company: experienceForm.company.trim(),
+        period: experienceForm.period.trim(),
+        type: experienceForm.type.trim(),
+        description: experienceForm.descriptionText
+          .split('\n')
+          .map((line) => line.trim())
+          .filter(Boolean),
+        tech: experienceForm.techCsv
+          .split(',')
+          .map((t) => t.trim())
+          .filter(Boolean),
+        order: Number(experienceForm.order) || 0,
+      };
+    }
+
     return {
-      role: experienceForm.role.trim(),
-      company: experienceForm.company.trim(),
-      period: experienceForm.period.trim(),
-      type: experienceForm.type.trim(),
-      description: experienceForm.descriptionText
-        .split('\n')
-        .map((line) => line.trim())
-        .filter(Boolean),
-      tech: experienceForm.techCsv
-        .split(',')
-        .map((t) => t.trim())
-        .filter(Boolean),
-      order: Number(experienceForm.order) || 0,
+      key: devInfoForm.key.trim(),
+      value: devInfoForm.value.trim(),
+      valueType: devInfoForm.valueType,
+      visible: devInfoForm.visible,
+      order: Number(devInfoForm.order) || 0,
     };
-  }, [tab, skillForm, projectForm, experienceForm]);
+  }, [tab, skillForm, projectForm, experienceForm, devInfoForm]);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -344,13 +375,24 @@ export default function ContentManager() {
       return;
     }
 
-    setExperienceForm({
-      role: item.role || '',
-      company: item.company || '',
-      period: item.period || '',
-      type: item.type || '',
-      descriptionText: (item.description || []).join('\n'),
-      techCsv: (item.tech || []).join(', '),
+    if (tab === 'experiences') {
+      setExperienceForm({
+        role: item.role || '',
+        company: item.company || '',
+        period: item.period || '',
+        type: item.type || '',
+        descriptionText: (item.description || []).join('\n'),
+        techCsv: (item.tech || []).join(', '),
+        order: String(item.order ?? 0),
+      });
+      return;
+    }
+
+    setDevInfoForm({
+      key: item.key || '',
+      value: item.value || '',
+      valueType: item.valueType === 'raw' ? 'raw' : 'string',
+      visible: item.visible ?? true,
       order: String(item.order ?? 0),
     });
   };
@@ -406,8 +448,8 @@ export default function ContentManager() {
       <div className='grid lg:grid-cols-[1.15fr,1fr] gap-8'>
         <div className='bg-white/[0.02] border border-border-glass rounded-2xl p-5'>
           <div className='flex items-center justify-between mb-4'>
-            <h2 className='text-lg font-grotesk font-semibold text-text-primary capitalize'>
-              {tab} list
+            <h2 className='text-lg font-grotesk font-semibold text-text-primary'>
+              {tabs.find((t) => t.value === tab)?.label} list
             </h2>
             <span className='text-xs text-text-muted'>
               {filteredItems.length} items
@@ -499,19 +541,58 @@ export default function ContentManager() {
                             ? item.name
                             : tab === 'projects'
                               ? item.title
-                              : item.role}
+                              : tab === 'experiences'
+                                ? item.role
+                                : item.key}
                         </p>
+                        {tab === 'devInfo' && !item.visible ? (
+                          <span className='text-[10px] px-1.5 py-0.5 rounded-md border border-border-glass text-text-muted'>
+                            Hidden
+                          </span>
+                        ) : null}
                       </div>
                       <p className='text-text-muted text-xs mt-1'>
                         {tab === 'skills'
                           ? `${item.category}${item.level ? ` • ${item.level}` : ''}`
                           : tab === 'projects'
                             ? item.description
-                            : `${item.company} • ${item.period}`}
+                            : tab === 'experiences'
+                              ? `${item.company} • ${item.period}`
+                              : item.valueType === 'string'
+                                ? `'${item.value}'`
+                                : item.value}
                         {` • Order: ${item.order ?? 0}`}
                       </p>
                     </div>
                     <div className='flex items-center gap-2'>
+                      {tab === 'devInfo' ? (
+                        <button
+                          onClick={async () => {
+                            const res = await fetch(
+                              `/api/portfolio/devInfo/${item._id}`,
+                              {
+                                method: 'PUT',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                  key: item.key,
+                                  value: item.value,
+                                  valueType: item.valueType,
+                                  order: item.order ?? 0,
+                                  visible: !item.visible,
+                                }),
+                              },
+                            );
+                            if (!res.ok) {
+                              toast.error('Failed to update visibility');
+                              return;
+                            }
+                            await loadItems('devInfo');
+                          }}
+                          className='text-xs px-2 py-1 rounded-lg border border-border-glass text-text-muted hover:text-text-primary'
+                        >
+                          {item.visible ? 'Hide' : 'Show'}
+                        </button>
+                      ) : null}
                       <button
                         onClick={() => onEdit(item)}
                         className='text-xs px-2 py-1 rounded-lg border border-border-glass text-text-muted hover:text-text-primary'
@@ -527,7 +608,9 @@ export default function ContentManager() {
                                 ? item.name
                                 : tab === 'projects'
                                   ? item.title
-                                  : item.role,
+                                  : tab === 'experiences'
+                                    ? item.role
+                                    : item.key,
                           })
                         }
                         className='text-xs px-2 py-1 rounded-lg border border-accent-cyan/40 text-accent-cyan hover:bg-accent-cyan/12'
@@ -549,12 +632,16 @@ export default function ContentManager() {
           <div className='flex items-center justify-between'>
             <h2 className='text-lg font-grotesk font-semibold text-text-primary'>
               {editingId
-                ? `Edit ${tab.slice(0, -1)}`
+                ? tab === 'devInfo'
+                  ? 'Edit dev card field'
+                  : `Edit ${tab.slice(0, -1)}`
                 : tab === 'skills'
                   ? 'Add new skill'
                   : tab === 'projects'
                     ? 'Add new project'
-                    : 'Add new experience'}
+                    : tab === 'experiences'
+                      ? 'Add new experience'
+                      : 'Add dev card field'}
             </h2>
             {editingId ? (
               <button
@@ -896,6 +983,101 @@ export default function ContentManager() {
                   }))
                 }
               />
+            </>
+          ) : null}
+
+          {tab === 'devInfo' ? (
+            <>
+              <p className='text-xs text-text-muted -mt-1'>
+                Controls the &quot;developer.ts&quot; code card shown in the
+                hero section.
+              </p>
+              <input
+                className={inputClass}
+                placeholder='Key (e.g. stack, coffee, Games)'
+                value={devInfoForm.key}
+                onChange={(e) =>
+                  setDevInfoForm((prev) => ({ ...prev, key: e.target.value }))
+                }
+                required
+              />
+              <input
+                className={inputClass}
+                placeholder="Value (e.g. Mostly MERN, but doesn't matter)"
+                value={devInfoForm.value}
+                onChange={(e) =>
+                  setDevInfoForm((prev) => ({
+                    ...prev,
+                    value: e.target.value,
+                  }))
+                }
+                required
+              />
+              <div className='grid grid-cols-2 gap-3'>
+                <div className='relative'>
+                  <select
+                    className={`${inputClass} ${selectClass}`}
+                    value={devInfoForm.valueType}
+                    onChange={(e) =>
+                      setDevInfoForm((prev) => ({
+                        ...prev,
+                        valueType: e.target.value as DevInfoForm['valueType'],
+                      }))
+                    }
+                  >
+                    <option value='string'>Text (quoted, cyan)</option>
+                    <option value='raw'>Raw (unquoted, orange)</option>
+                  </select>
+                  <span className='pointer-events-none absolute inset-y-0 right-3 flex items-center text-text-muted'>
+                    <svg
+                      width='14'
+                      height='14'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      xmlns='http://www.w3.org/2000/svg'
+                    >
+                      <path
+                        d='M6 9L12 15L18 9'
+                        stroke='currentColor'
+                        strokeWidth='2'
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <input
+                  className={inputClass}
+                  type='number'
+                  placeholder='Order'
+                  value={devInfoForm.order}
+                  onChange={(e) =>
+                    setDevInfoForm((prev) => ({
+                      ...prev,
+                      order: e.target.value,
+                    }))
+                  }
+                />
+              </div>
+              <div className='flex items-center gap-3'>
+                <input
+                  id='devInfoVisible'
+                  type='checkbox'
+                  checked={devInfoForm.visible}
+                  onChange={(e) =>
+                    setDevInfoForm((prev) => ({
+                      ...prev,
+                      visible: e.target.checked,
+                    }))
+                  }
+                />
+                <label
+                  htmlFor='devInfoVisible'
+                  className='text-sm text-text-muted'
+                >
+                  Visible on site
+                </label>
+              </div>
             </>
           ) : null}
 

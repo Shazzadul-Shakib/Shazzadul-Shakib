@@ -1,15 +1,12 @@
-const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024;
+const MAX_IMAGE_SIZE_BYTES = 5 * 1024 * 1024;
+const MAX_RESUME_SIZE_BYTES = 10 * 1024 * 1024;
 
 export class ImageUploadError extends Error {}
 
-export async function uploadImageToCloudinary(file: File): Promise<string> {
-  if (!file.type.startsWith('image/')) {
-    throw new ImageUploadError('Please choose an image file.');
-  }
-  if (file.size > MAX_FILE_SIZE_BYTES) {
-    throw new ImageUploadError('Image must be smaller than 5MB.');
-  }
-
+async function uploadToCloudinary(
+  file: File,
+  resourceType: 'image' | 'auto',
+): Promise<string> {
   const sigRes = await fetch('/api/upload/signature', { method: 'POST' });
   if (!sigRes.ok) {
     throw new ImageUploadError('Could not start upload. Please log in again.');
@@ -25,7 +22,7 @@ export async function uploadImageToCloudinary(file: File): Promise<string> {
   formData.append('folder', folder);
 
   const uploadRes = await fetch(
-    `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
+    `https://api.cloudinary.com/v1_1/${cloudName}/${resourceType}/upload`,
     { method: 'POST', body: formData },
   );
 
@@ -35,4 +32,24 @@ export async function uploadImageToCloudinary(file: File): Promise<string> {
 
   const data = await uploadRes.json();
   return data.secure_url as string;
+}
+
+export async function uploadImageToCloudinary(file: File): Promise<string> {
+  if (!file.type.startsWith('image/')) {
+    throw new ImageUploadError('Please choose an image file.');
+  }
+  if (file.size > MAX_IMAGE_SIZE_BYTES) {
+    throw new ImageUploadError('Image must be smaller than 5MB.');
+  }
+  return uploadToCloudinary(file, 'image');
+}
+
+export async function uploadResumeToCloudinary(file: File): Promise<string> {
+  if (file.type !== 'application/pdf') {
+    throw new ImageUploadError('Please choose a PDF file.');
+  }
+  if (file.size > MAX_RESUME_SIZE_BYTES) {
+    throw new ImageUploadError('Resume must be smaller than 10MB.');
+  }
+  return uploadToCloudinary(file, 'auto');
 }

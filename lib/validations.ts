@@ -79,6 +79,28 @@ export const projectSchema = z.object({
   order: z.number().int().min(0).optional().default(0),
 });
 
+export const siteSettingsSchema = z.object({
+  resumeUrl: z
+    .string()
+    .min(1, 'Resume URL is required')
+    .url('Please enter a valid URL'),
+});
+
+export const devInfoSchema = z.object({
+  key: z
+    .string()
+    .min(1, 'Key is required')
+    .max(40)
+    .regex(
+      /^[A-Za-z][A-Za-z0-9]*$/,
+      'Key must start with a letter and contain only letters/numbers',
+    ),
+  value: z.string().min(1, 'Value is required').max(300),
+  valueType: z.enum(['string', 'raw']).default('string'),
+  visible: z.boolean().default(true),
+  order: z.number().int().min(0).optional().default(0),
+});
+
 export const experienceSchema = z.object({
   role: z.string().min(2, 'Role is required').max(120),
   company: z.string().min(2, 'Company is required').max(120),
@@ -94,3 +116,5 @@ export type BlogInput = z.infer<typeof blogSchema>;
 export type SkillInput = z.infer<typeof skillSchema>;
 export type ProjectInput = z.infer<typeof projectSchema>;
 export type ExperienceInput = z.infer<typeof experienceSchema>;
+export type DevInfoInput = z.infer<typeof devInfoSchema>;
+export type SiteSettingsInput = z.infer<typeof siteSettingsSchema>;

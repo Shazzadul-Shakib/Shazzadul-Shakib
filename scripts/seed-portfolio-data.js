@@ -181,6 +181,39 @@ const experiencesData = [
   },
 ];
 
+const devInfoData = [
+  { key: 'name', value: 'Shakib', valueType: 'string', visible: true, order: 1 },
+  {
+    key: 'stack',
+    value: "Mostly MERN, but doesn't matter",
+    valueType: 'string',
+    visible: true,
+    order: 2,
+  },
+  {
+    key: 'available',
+    value: 'true',
+    valueType: 'raw',
+    visible: true,
+    order: 3,
+  },
+  {
+    key: 'coffee',
+    value: 'Infinity',
+    valueType: 'raw',
+    visible: true,
+    order: 4,
+  },
+  { key: 'Games', value: 'PUBG', valueType: 'raw', visible: true, order: 5 },
+  {
+    key: 'Sports',
+    value: "Any, just let's go",
+    valueType: 'raw',
+    visible: true,
+    order: 6,
+  },
+];
+
 async function main() {
   loadEnv();
 
@@ -229,12 +262,25 @@ async function main() {
     { timestamps: true },
   );
 
+  const devInfoSchema = new mongoose.Schema(
+    {
+      key: String,
+      value: String,
+      valueType: String,
+      visible: Boolean,
+      order: Number,
+    },
+    { timestamps: true },
+  );
+
   const Skill = mongoose.models.Skill || mongoose.model('Skill', skillSchema);
   const Project =
     mongoose.models.Project || mongoose.model('Project', projectSchema);
   const Experience =
     mongoose.models.Experience ||
     mongoose.model('Experience', experienceSchema);
+  const DevInfo =
+    mongoose.models.DevInfo || mongoose.model('DevInfo', devInfoSchema);
 
   let seededProjects = 0;
   for (const project of projectsData) {
@@ -270,10 +316,21 @@ async function main() {
     if (res.upsertedCount > 0 || res.modifiedCount > 0) seededExperiences += 1;
   }
 
+  let seededDevInfo = 0;
+  for (const devInfo of devInfoData) {
+    const res = await DevInfo.updateOne(
+      { key: devInfo.key },
+      { $set: devInfo, $setOnInsert: { createdAt: new Date() } },
+      { upsert: true },
+    );
+    if (res.upsertedCount > 0 || res.modifiedCount > 0) seededDevInfo += 1;
+  }
+
   console.log('Portfolio seed completed');
   console.log(`Projects upserted: ${seededProjects}`);
   console.log(`Skills upserted: ${seededSkills}`);
   console.log(`Experiences upserted: ${seededExperiences}`);
+  console.log(`Dev card fields upserted: ${seededDevInfo}`);
 
   await mongoose.disconnect();
 }

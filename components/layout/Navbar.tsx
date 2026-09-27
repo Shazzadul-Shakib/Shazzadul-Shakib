@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { navLinks, siteConfig } from '@/utils/constants';
+import { navLinks } from '@/utils/constants';
 import Button from '@/components/ui/Button';
 import MobileMenu from './MobileMenu';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
-export default function Navbar() {
+export default function Navbar({ resumeUrl }: { resumeUrl: string }) {
   const pathname = usePathname();
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
@@ -162,7 +162,7 @@ export default function Navbar() {
             {/* CTA + Mobile toggle */}
             <div className='flex items-center gap-3'>
               <a
-                href={siteConfig.resumeUrl}
+                href={resumeUrl}
                 target='_blank'
                 rel='noopener noreferrer'
                 className='hidden md:block'
@@ -187,6 +187,7 @@ export default function Navbar() {
         onNavClick={handleNavClick}
         activeSection={activeSection}
         pathname={pathname}
+        resumeUrl={resumeUrl}
       />
     </>
   );
