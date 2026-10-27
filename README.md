@@ -39,6 +39,10 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Acti
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=Shazzadul-Shakib&theme=radical&hide_border=true)](https://github.com/Shazzadul-Shakib)
 
+<br />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shazzadul-Shakib&layout=donut&theme=radical&hide_border=true&langs_count=8" alt="Top programming languages" />
+
 </div>
 
 ## 🤝 Connect
