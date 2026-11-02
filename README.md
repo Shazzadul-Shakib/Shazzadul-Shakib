@@ -2,23 +2,23 @@
 
 # 👋 Hi, I'm Shazzadul Islam Shakib
 
-**Full Stack Developer** | 2+ Years Experience | [Resume](https://drive.google.com/file/d/1qcd_-uSK5wOWajg3Uuo0zvpzjgo_y70l/view?usp=drive_link)
+**Full-Stack Developer** | 3+ Years Experience | [Resume](https://drive.google.com/file/d/1qcd_-uSK5wOWajg3Uuo0zvpzjgo_y70l/view?usp=drive_link)
 
 Building scalable web applications with modern tech • Clean architecture • Performance optimization
 
 </div>
 
 ## 🎯 2026 Goals
-Learning AWS, Fundamentals in depth & System Design to level up as a Software Engineer
+Learning Fundamentals in depth & System Design  and Infrastructure to level up as a Software Engineer
 
 ## 💻 Tech Stack
 
 ```yaml
-Languages:    JavaScript, TypeScript
+Languages:    JavaScript, TypeScript, Go
 Frontend:     ReactJS, NextJS, Next Auth, TailwindCSS, Redux Toolkit, React Query, React Hook Form, Zustand, Socket.io, Websocket, Framer motion, React Flow, Localization
-Backend:      NodeJs, ExpressJs, NestJs, Mongoose, Prisma, Socket.io
+Backend:      NodeJs, ExpressJs, NestJs, Gin, Mongoose, GORM, Prisma, Socket.io, Redis
 Database:     MongoDB, PostgreSQL, MySQL
-Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Actions
+Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Actions, Nginx, AI(llm API) Integration
 ```
 
 ## 🚀 Projects
@@ -31,7 +31,6 @@ Tools:        Git, VS Code, Swagger, Postman, Vercel, Docker, CI/CD, Github Acti
 - **[ProjectGate](https://project-gate-client.vercel.app)** - Role-Based Project Management System.
 - **[Twin Credits](https://twin-credits-client.vercel.app)** - A referral and credit system, enabling users to earn rewards, manage credits, and access digital products seamlessly.
 - **[Raptor Tech Landing page](https://raptortechltd-mu.vercel.app)** - Landing page for Raptortech Ltd.
-- **[Zalmi Technology](https://zalmi.bd/)** - Company website for Zalmi Technology.
 
 ## 📊 GitHub Stats
 
